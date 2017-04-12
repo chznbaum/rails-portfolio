@@ -1,0 +1,9 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+<h2>Recent Posts</h2>
+<% for post in @posts %>
+  <article>
+    <h3><%= post.title %></h3>
+    <div><%= post.body %></div>
+  </article>
+<% end %>
