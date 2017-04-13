@@ -1,10 +1,13 @@
 <h1>Portfolio Items</h1>
 
+<%= link_to "Add a Portfolio Item", new_portfolio_path %>
+
 <% @portfolio_items.each do |portfolio_item| %>
   <section>
     <h2><%= portfolio_item.title %></h2>
     <p><%= portfolio_item.subtitle %></p>
     <%= image_tag portfolio_item.thumb_image %>
     <p><%= portfolio_item.body %></p>
+    <p><%= link_to "Edit Item", edit_portfolio_path(portfolio_item.id) %></p>
   </section>
 <% end %>
