@@ -21,6 +21,7 @@ class PortfoliosController < ApplicationController
   def new
     # Create a new Portfolio instance
     @portfolio_item = Portfolio.new
+    3.times { @portfolio_item.technologies.build }
   end
 
   def edit
@@ -30,7 +31,7 @@ class PortfoliosController < ApplicationController
 
   def create
     # Validate new Portfolio
-    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, :main_image, :thumb_image))
+    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, :main_image, :thumb_image, technologies_attributes: [:name]))
     # What happens next
     respond_to do |format|
       # If successfully created
@@ -50,7 +51,7 @@ class PortfoliosController < ApplicationController
     # What happens next
     respond_to do |format|
       # Validate changes
-      if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body, :main_image, :thumb_image))
+      if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body, :main_image, :thumb_image, technologies_attributes: [:name]))
         # Redirect to portfolios index
         format.html { redirect_to portfolios_path, notice: 'The portfolio item has been updated.' }
       else
