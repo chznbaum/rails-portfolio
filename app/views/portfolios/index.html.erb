@@ -1,0 +1,14 @@
+<h1>Portfolio Items</h1>
+
+<%= link_to "Add a Portfolio Item", new_portfolio_path %>
+
+<% @portfolio_items.each do |portfolio_item| %>
+  <section>
+    <h2><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></h2>
+    <p><%= portfolio_item.subtitle %></p>
+    <%= image_tag portfolio_item.thumb_image %>
+    <p><%= portfolio_item.body %></p>
+    <p><%= link_to "Edit Item", edit_portfolio_path(portfolio_item) %></p>
+    <p><%= link_to "Delete Item", portfolio_item, method: :delete, data: { confirm: "Are you sure you want to delete that portfolio item?" } %></p>
+  </section>
+<% end %>
