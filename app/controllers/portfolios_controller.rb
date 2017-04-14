@@ -5,6 +5,14 @@ class PortfoliosController < ApplicationController
     @portfolio_items = Portfolio.all
   end
 
+  def ruby_on_rails
+    @ruby_on_rails_portfolio_items = Portfolio.ruby_on_rails
+  end
+
+  def vue
+    @vue_portfolio_items = Portfolio.vue
+  end
+
   def show
     # Look up portfolio item
     @portfolio_item = Portfolio.find(params[:id])

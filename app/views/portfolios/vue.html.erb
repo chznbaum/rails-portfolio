@@ -1,12 +1,8 @@
-<h1>Portfolio Items</h1>
+<h1>Vue Portfolio Items</h1>
 
-<p><%= link_to "Add a Portfolio Item", new_portfolio_path %></p>
+<%= link_to "Add a Portfolio Item", new_portfolio_path %>
 
-<p><%= link_to "Ruby on Rails", ruby_on_rails_portfolio_path %>
-
-<%= link_to "Vue", vue_portfolio_path %></p>
-
-<% @portfolio_items.each do |portfolio_item| %>
+<% @vue_portfolio_items.each do |portfolio_item| %>
   <section>
     <h2><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></h2>
     <p><%= portfolio_item.subtitle %></p>
