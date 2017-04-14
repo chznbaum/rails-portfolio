@@ -24,7 +24,6 @@ module RailsPortfolio
     config.generators do |g|
       g.orm             :active_record
       g.template_engine :erb
-      g.test_framework  :rspec
       g.stylesheets     false
       g.javascripts     false
     end
