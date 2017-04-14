@@ -4,6 +4,7 @@
 <% @blogs.each do |blog| %>
   <h2><%= blog.title %></h2>
   <p><%= blog.created_at %></p>
+  <p><%= link_to blog.status, toggle_status_blog_path(blog) %></p>
   <div><%= blog.body %></div>
   <p><%= link_to 'Show More', blog %></p>
   <p><%= link_to 'Edit', edit_blog_path(blog) %></p>
