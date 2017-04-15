@@ -31,7 +31,7 @@ class PortfoliosController < ApplicationController
 
   def create
     # Validate new Portfolio
-    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, :main_image, :thumb_image, technologies_attributes: [:name]))
+    @portfolio_item = Portfolio.new(portfolio_params)
     # What happens next
     respond_to do |format|
       # If successfully created
@@ -51,7 +51,7 @@ class PortfoliosController < ApplicationController
     # What happens next
     respond_to do |format|
       # Validate changes
-      if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body, :main_image, :thumb_image, technologies_attributes: [:name]))
+      if @portfolio_item.update(portfolio_params)
         # Redirect to portfolios index
         format.html { redirect_to portfolios_path, notice: 'The portfolio item has been updated.' }
       else
@@ -73,4 +73,16 @@ class PortfoliosController < ApplicationController
     end
   end
 
+  private
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def portfolio_params
+    params.require(:portfolio).permit(:title,
+                                      :subtitle,
+                                      :body,
+                                      :main_image,
+                                      :thumb_image,
+                                      technologies_attributes: [:name]
+                                      )
+  end
 end
