@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
-  get '/auth/:provider/callback', to: 'sessions#create'
-  get '/auth/failure' do
-    flash[:notice] = params[:message]
-    redirect '/'
-  end
 
-  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
 
   resources :portfolios, except: [:show]
   get 'ruby-on-rails-portfolio', to: 'portfolios#ruby_on_rails'
