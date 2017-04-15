@@ -1,4 +1,4 @@
-<h1>Pages#home</h1>
+<h1>Hi, <%= current_user.first_name if current_user %></h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 <h2>Recent Posts</h2>
 <% @posts.each do |post| %>
