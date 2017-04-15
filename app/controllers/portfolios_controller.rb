@@ -3,6 +3,7 @@ class PortfoliosController < ApplicationController
   def index
     # Pass Portfolios to the view
     @portfolio_items = Portfolio.all
+    @page_title = "Portfolio"
   end
 
   def ruby_on_rails
@@ -16,17 +17,20 @@ class PortfoliosController < ApplicationController
   def show
     # Look up portfolio item
     @portfolio_item = Portfolio.find(params[:id])
+    @page_title = @portfolio_item.title
   end
 
   def new
     # Create a new Portfolio instance
     @portfolio_item = Portfolio.new
     3.times { @portfolio_item.technologies.build }
+    @page_title = "Create a New Portfolio Item"
   end
 
   def edit
     # Look up portfolio item
     @portfolio_item = Portfolio.find(params[:id])
+    @page_title = "Editing \"" + @portfolio_item.title + "\""
   end
 
   def create

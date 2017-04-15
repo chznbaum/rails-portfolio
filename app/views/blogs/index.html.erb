@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1><%= @page_title %></h1>
 <% @blogs.each do |blog| %>
   <h2><%= blog.title %></h2>
   <p><%= blog.created_at %></p>
