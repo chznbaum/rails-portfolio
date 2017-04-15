@@ -55,5 +55,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # friendly_id for blog slugs
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 
-# devise for authentication
+# Authentication
 gem 'devise', '~> 4.2', '>= 4.2.1'
+gem 'omniauth', '~> 1.6', '>= 1.6.1'
+gem 'omniauth-github', '~> 1.2', '>= 1.2.3'
+gem 'omniauth-twitter', '~> 1.4'
