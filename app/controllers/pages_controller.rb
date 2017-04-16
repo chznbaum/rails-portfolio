@@ -5,8 +5,10 @@ class PagesController < ApplicationController
   end
 
   def about
+    @page_title = "About Chazona"
   end
 
   def contact
+    @page_title = "Contact"
   end
 end

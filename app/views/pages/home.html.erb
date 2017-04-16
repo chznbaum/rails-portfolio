@@ -1,4 +1,5 @@
-<h1>Hi, <%= current_user.first_name %></h1>
+<h1><%= @page_title %></h1>
+<p>Hi, <%= current_user.first_name %></p>
 <p>Find me in app/views/pages/home.html.erb</p>
 <h2>Recent Posts</h2>
 <% @posts.each do |post| %>
@@ -10,4 +11,9 @@
 <h2>Skills</h2>
 <% @skills.each do |skill| %>
   <p><%= skill.title %>: <%= skill.percent_utilized %></p>
+  <hr>
+<% end %>
+
+<%= content_tag :p, class: "my-special-class" do %>
+  This is a paragraph tag.
 <% end %>

@@ -1,24 +1,30 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  layout "blog"
 
   # GET /blogs
   # GET /blogs.json
   def index
     @blogs = Blog.all
+    @page_title = "Blog"
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    @page_title = @blog.title
+    @seo_keywords = @blog.body
   end
 
   # GET /blogs/new
   def new
     @blog = Blog.new
+    @page_title = "Create a New Post"
   end
 
   # GET /blogs/1/edit
   def edit
+    @page_title = "Editing \"" + @blog.title + "\""
   end
 
   # POST /blogs
