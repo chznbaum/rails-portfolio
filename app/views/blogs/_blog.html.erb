@@ -1,5 +1,5 @@
 <h2><%= blog.title %></h2>
-<p><%= blog.created_at %></p>
+<p>Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</p>
 <p><%= link_to blog.status, toggle_status_blog_path(blog) %></p>
 <div><%= blog.body %></div>
 <p><%= link_to 'Show More', blog %></p>
