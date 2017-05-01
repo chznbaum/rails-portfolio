@@ -21,11 +21,9 @@
         <div class="cover-container">
           <%= render "shared/application_nav" %>
           
-          <%= login_helper %>
-          
           <%= yield %>
           
-          <%= copyright_generator %>
+          <%= render "shared/application_footer" %>
           
           <%= source_helper("application") %>
         </div>
