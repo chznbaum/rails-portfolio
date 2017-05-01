@@ -61,4 +61,4 @@ gem 'devise', '~> 4.2', '>= 4.2.1'
 # Bootstrap
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
-gem 'chznbaum_view_tool', git: 'https://github.com/chznbaum/chznbaum_view_tool.git'
+gem 'chznbaum_view_tool', '~> 0.1.0'
