@@ -1,6 +1,6 @@
 <h1><%= @page_title %></h1>
 
-<p><%= link_to "Add a Portfolio Item", new_portfolio_path %></p>
+<p><%= link_to "Add a Portfolio Item", new_portfolio_path if logged_in?(:site_admin) %></p>
 
 <p><%= link_to "Ruby on Rails", ruby_on_rails_portfolio_path %>
 
