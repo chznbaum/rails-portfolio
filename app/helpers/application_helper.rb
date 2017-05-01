@@ -14,4 +14,8 @@ module ApplicationHelper
             content_tag(:p, greeting, class: "source-#{layout_name}")
         end
     end
+
+    def copyright_generator
+        @copyright = ChznbaumViewTool::Renderer.copyright 'Chazona Baum', 'All rights reserved'
+    end
 end
