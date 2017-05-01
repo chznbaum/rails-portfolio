@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/chznbaum/chznbaum_view_tool.git
+  revision: 994128c42b051fab106e772016fb756dc41596b5
+  specs:
+    chznbaum_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -175,6 +181,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap (~> 4.0.0.alpha6)
   byebug
+  chznbaum_view_tool!
   coffee-rails (~> 4.2)
   devise (~> 4.2, >= 4.2.1)
   friendly_id (~> 5.1.0)
