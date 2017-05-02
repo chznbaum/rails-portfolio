@@ -161,3 +161,20 @@ body {
     width: 55rem;
   }
 }
+
+/*
+ * Custom Styles
+ */
+ .card-block {
+   color: #000;
+   color: rgba(0,0,0,0.875);
+
+   form {
+     text-align: left;
+   }
+ }
+
+ .auth-links a {
+   color: #000;
+   color: rgba(0,0,0,0.875);
+ }
