@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
-
+    <meta name="description" content="">
+    <meta name="author" content="Chazona Baum">
     <meta name="keywords" content="<%= @seo_keywords %>">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,17 +14,20 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    
-    <%= render "shared/nav", location: 'top' %>
+    <div class="site-wrapper">
 
-    <%= login_helper %>
+      <div class="site-wrapper-inner">
 
-    <%= yield %>
-
-    <%= copyright_generator %>
-    
-    <%= source_helper("application") %>
+        <div class="cover-container">
+          <%= render "shared/application_nav" %>
+          
+          <%= yield %>
+          
+          <%= render "shared/application_footer" %>
+          
+          <%= source_helper("application") %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
 
+    <meta name="description" content="">
+    <meta name="author" content="Chazona Baum">
     <meta name="keywords" content="<%= @seo_keywords %>">
 
     <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,15 +16,15 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
+    <%= render 'shared/portfolio_nav' %>
+
+    <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin) %>
     
-    <%= render "shared/nav", location: 'top' %>
-
-    <%= login_helper %>
-
     <%= yield %>
     
     <%= source_helper("portfolio") %>
+
+    <%= render 'shared/portfolio_footer' %>
   </body>
 </html>

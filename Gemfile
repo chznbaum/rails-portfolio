@@ -66,3 +66,9 @@ gem 'chznbaum_view_tool', '~> 0.1.0'
 
 # Authorization
 gem 'petergate', '~> 1.7', '>= 1.7.3'
+
+# FontAwesome
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
+
+# Pagination
+gem 'kaminari', '~> 0.17.0'

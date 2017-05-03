@@ -1,5 +1,7 @@
-<h1><%= @page_title %></h1>
+<div class="col-sm-8 blog-main">
+    <h2><%= @page_title %></h1>
 
-<%= render 'form', blog: @blog %>
+    <%= render 'form', blog: @blog %>
 
-<%= link_to 'Back', blogs_path %>
+    <%= link_to 'Back to Blog', blogs_path %>
+</div><!-- /.blog-main -->
