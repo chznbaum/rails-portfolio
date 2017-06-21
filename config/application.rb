@@ -27,5 +27,6 @@ module RailsPortfolio
       g.stylesheets     false
       g.javascripts     false
     end
+    config.assets.paths << "#{Rails.root}/app/assets/"
   end
 end
