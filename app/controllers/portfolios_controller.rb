@@ -4,7 +4,7 @@ class PortfoliosController < ApplicationController
 
   def index
     # Pass Portfolios to the view
-    @portfolio_items = Portfolio.all
+    @portfolio_items = Portfolio.by_position
     @page_title = "Portfolio"
   end
 
