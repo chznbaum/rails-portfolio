@@ -5,6 +5,10 @@ class Portfolio < ApplicationRecord
   include Placeholder
   validates_presence_of :title, :body, :main_image, :thumb_image
 
+  def self.by_position
+    order("position ASC")
+  end
+
   scope :ruby_on_rails, -> { where(subtitle: 'Ruby on Rails') }
 
   scope :vue, -> { where(subtitle: 'Vue') }

@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
 
-  resources :portfolios, except: [:show]
+  resources :portfolios, except: [:show] do
+    put :sort, on: :collection
+  end
   get 'ruby-on-rails-portfolio', to: 'portfolios#ruby_on_rails'
   get 'vue-portfolio', to: 'portfolios#vue'
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
