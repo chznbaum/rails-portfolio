@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" data-id="<%= portfolio_item.id %>">
     <%= image_tag portfolio_item.thumb_image, alt: "#{portfolio_item.title} Screenshot" unless portfolio_item.thumb_image.nil? %>
     <h3><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %>
     <small><%= portfolio_item.subtitle %></small>

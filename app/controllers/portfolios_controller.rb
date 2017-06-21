@@ -8,6 +8,13 @@ class PortfoliosController < ApplicationController
     @page_title = "Portfolio"
   end
 
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+    render nothing: true
+  end
+
   def ruby_on_rails
     @ruby_on_rails_portfolio_items = Portfolio.ruby_on_rails
   end
