@@ -1,7 +1,6 @@
 <div class="card">
     <%= image_tag portfolio_item.thumb_image, alt: "#{portfolio_item.title} Screenshot" unless portfolio_item.thumb_image.nil? %>
-    <h2><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></br>
+    <h3><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %>
     <small><%= portfolio_item.subtitle %></small>
-    </h2>
-    <p class="card-text"><%= portfolio_item.body %></p>
+    </h3>
 </div>
