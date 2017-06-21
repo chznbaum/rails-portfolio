@@ -1,6 +1,6 @@
 class PortfoliosController < ApplicationController
   layout 'portfolio'
-  access all: [:show, :index, :ruby_on_rails, :vue], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+  access all: [:show, :index, :ruby_on_rails, :vue], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
 
   def index
     # Pass Portfolios to the view
