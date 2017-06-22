@@ -19,13 +19,19 @@
       <div class="site-wrapper-inner">
 
         <div class="cover-container">
-          <%= video_tag(
-            'layout.mp4',
-            id: 'background',
-            autoplay: true,
-            loop: true,
-            muted: true
-          ) %>
+          <% if current_page?(root_path) %>
+            <%= video_tag(
+              'sketch.vid',
+              id: 'background',
+              autoplay: true,
+              loop: true,
+              muted: true,
+              poster: 'sketch.jpg'
+            ) %>
+          <% else %>
+            <div id="background"></div>
+            <div id="background-overlay"></div>
+          <% end %>
           <%= render "shared/application_nav" %>
           
           <%= yield %>
