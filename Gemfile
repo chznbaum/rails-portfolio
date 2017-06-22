@@ -76,7 +76,14 @@ gem 'kaminari', '~> 0.17.0'
 # jQuery UI
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 
+# Uploading
 gem 'carrierwave', '~> 1.1'
 gem 'carrierwave-aws', '~> 1.1'
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 gem 'mini_magick', '~> 4.7', '>= 4.7.2'
+
+# Form JavaScript
+gem 'cocoon', '~> 1.2', '>= 1.2.10'
+
+# Notifications
+gem 'gritter', '~> 1.2'
