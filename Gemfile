@@ -84,3 +84,6 @@ gem 'mini_magick', '~> 4.7', '>= 4.7.2'
 
 # Form JavaScript
 gem 'cocoon', '~> 1.2', '>= 1.2.10'
+
+# Notifications
+gem 'gritter', '~> 1.2'
