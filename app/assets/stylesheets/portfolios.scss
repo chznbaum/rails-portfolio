@@ -10,6 +10,10 @@ body {
   min-height: 75rem; /* Can be removed; just added for demo purposes */
 }
 
+img {
+  object-fit: cover;
+}
+
 .navbar {
   margin-bottom: 0;
 }
@@ -68,7 +72,6 @@ footer p {
 /*
  * Custom styles
  */
-
-.portfolio-form {
-  padding: 20px;
+.portfolio-container {
+  padding-top: 20px;
 }
