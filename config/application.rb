@@ -10,6 +10,7 @@ require "action_mailer/railtie"
 require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
+require "dotenv-rails"
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -27,5 +28,6 @@ module RailsPortfolio
       g.stylesheets     false
       g.javascripts     false
     end
+    config.assets.paths << "#{Rails.root}/app/assets/"
   end
 end

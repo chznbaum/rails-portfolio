@@ -30,7 +30,6 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
 }
 body {
   color: #fff;
@@ -165,31 +164,67 @@ body {
 /*
  * Custom Styles
  */
- .card-block {
-   color: #000;
-   color: rgba(0,0,0,0.875);
+.card-block {
+  color: #000;
+  color: rgba(0,0,0,0.875);
 
-   form {
-     text-align: left;
-   }
- }
+  form {
+    text-align: left;
+  }
+}
 
- .auth-links a {
-   color: #000;
-   color: rgba(0,0,0,0.875);
- }
- 
- .login {
-   .card {
-     width: 22rem;
-     margin: 0 auto;
-     float: none;
-   }
- }
- 
- .app-nav {
-   span {
-     margin-left: 10px;
-     margin-right: 10px;
-   }
- }
+.auth-links a {
+  color: #000;
+  color: rgba(0,0,0,0.875);
+}
+
+.login {
+  .card {
+    width: 22rem;
+    margin: 0 auto;
+    float: none;
+  }
+}
+
+.app-nav {
+  span {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+#background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-image: image-url('typing.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -99;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.profile-image {
+  border-radius: 50%;
+  background-color: rgba(1,1,1,0.3);
+  border: solid 1px rgba(0,0,0,0.5);
+}
+
+.app-footer {
+  color: white;
+}
