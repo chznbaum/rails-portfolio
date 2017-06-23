@@ -29,5 +29,6 @@ module RailsPortfolio
       g.javascripts     false
     end
     config.assets.paths << "#{Rails.root}/app/assets/"
+    config.eager_load_paths << "#{Rails.root}/lib"
   end
 end
