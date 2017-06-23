@@ -11,4 +11,8 @@ class PagesController < ApplicationController
   def contact
     @page_title = "Contact"
   end
+
+  def tech_news
+    @tweets = SocialTool.twitter_search
+  end
 end
