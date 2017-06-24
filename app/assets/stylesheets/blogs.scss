@@ -164,6 +164,7 @@ h6, .h6 {
  */
 
 .blog-footer {
+  margin-top: 1em;
   padding: 2.5rem 0;
   color: #999;
   text-align: center;
@@ -182,5 +183,24 @@ h6, .h6 {
 
    li {
      font-size: 2.5em;
+   }
+ }
+
+#new_comment, #comment-header {
+  margin-top: 1em;
+}
+
+ .comment-card {
+   .card {
+     margin-top: 1em;
+   }
+   img {
+     border-radius: 50%;
+     background-color: rgba(0,0,0,0.1);
+     border: solid 1px rgba(0,0,0,0.2);
+   }
+   .comment-attribution {
+     font-size: 0.8em;
+     font-style: italic;
    }
  }

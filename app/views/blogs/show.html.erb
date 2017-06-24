@@ -6,4 +6,12 @@
   <div>
     <%= @blog.body %>
   </div>
+
+  <h3 id="comment-header">Comments</h3>
+
+  <%= render 'comments/comment_form' %>
+
+  <div id="comments" data-blog-id="<%= @blog.id %>">
+    <%= render @blog.comments %>
+  </div>
 </div><!-- /.blog-main -->
