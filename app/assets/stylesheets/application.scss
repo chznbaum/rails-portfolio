@@ -154,11 +154,11 @@ body {
   }
 }
 
-@media (min-width: 62em) {
+@media (min-width: 70em) {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 55rem;
+    width: 65rem;
   }
 }
 
@@ -228,4 +228,15 @@ body {
 
 .app-footer {
   color: white;
+}
+
+.tech-news {
+  color: rgba(0,0,0,0.875);
+  margin: 0.5em;
+  .card {
+    padding: 0.5em;
+  }
+  a {
+    color: rgba(0,0,0,0.875);
+  }
 }

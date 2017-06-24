@@ -34,12 +34,16 @@ module ApplicationHelper
                 title: 'Portfolio'
             },
             {
-                url: contact_path,
-                title: 'Contact'
-            },
-            {
                 url: blogs_path,
                 title: 'Blog'
+            },
+            {
+                url: tech_news_path,
+                title: 'Tech News'
+            },
+            {
+                url: contact_path,
+                title: 'Contact'
             },
         ]
     end
