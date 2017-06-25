@@ -11,6 +11,10 @@
   </div>
 
   <div class="form-group">
+    <%= f.collection_select :topic_id, Topic.all, :id, :title, { :prompt => 'Please select a topic' }, class: 'custom-select', 'aria-label': 'Topic' %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :body %>
     <%= f.text_area :body, class: 'form-control', rows: 15 %>
   </div>
