@@ -1,15 +1,24 @@
 <div class="col-sm-3 offset-sm-1 blog-sidebar">
     <div class="sidebar-module sidebar-module-inset">
-        <h4>About</h4>
-        <p>My name is Chazona Baum, and I am a self-taught front-end developer with diverse experiences in industries ranging from food service to veterinary medicine to insurance.</p>
+      <h4>About</h4>
+      <%= image_tag image_path("chazona.png"), class: "profile-image img-fluid", alt: "profile image" %>
+      <p>My name is Chazona Baum, and I am a self-taught full-stack developer with diverse experiences in industries ranging from food service to veterinary medicine to insurance.</p>
     </div>
     <div class="sidebar-module">
-        <h4>Elsewhere</h4>
-        <ol class="list-unstyled social-links">
-            <li><a href="https://github.com/chznbaum"><%= fa_icon "github" %></a></li>
-            <li><a href="https://codepen.io/chznbaum"><%= fa_icon "codepen" %></a></li>
-            <li><a href="https://twitter.com/chznbaum"><%= fa_icon "twitter" %></a></li>
-            <li><a href="https://www.linkedin.com/in/chznbaum"><%= fa_icon "linkedin" %></a></li>
-        </ol>
+      <h4>Elsewhere</h4>
+      <ol class="list-unstyled social-links">
+        <li><a href="https://github.com/chznbaum"><%= fa_icon "github" %></a></li>
+        <li><a href="https://codepen.io/chznbaum"><%= fa_icon "codepen" %></a></li>
+        <li><a href="https://twitter.com/chznbaum"><%= fa_icon "twitter" %></a></li>
+        <li><a href="https://www.linkedin.com/in/chznbaum"><%= fa_icon "linkedin" %></a></li>
+      </ol>
+    </div>
+    <div class="sidebar-module sidebar-module-inset">
+      <h4>Topics</h4>
+      <ol class="list-unstyled">
+        <% @all_topics.each do |topic| %>
+          <li><%= link_to topic.title, topic %></li>
+        <% end %>
+      </ol>
     </div>
 </div><!-- /.blog-sidebar -->

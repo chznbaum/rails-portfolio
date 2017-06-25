@@ -3,7 +3,6 @@ class TopicsController < ApplicationController
   access all: [:show, :index]
 
   def index
-    @topics = Topic.order(title: :asc)
   end
 
   def show
