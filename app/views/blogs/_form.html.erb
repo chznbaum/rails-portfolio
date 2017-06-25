@@ -10,6 +10,12 @@
     <%= f.text_field :title, class: 'form-control' %>
   </div>
 
+  <div>
+    <%= f.collection_radio_buttons :status, Blog.statuses, :first, :first do |button| %>
+      <%= button.label(class: "custom-control custom-radio") { button.radio_button(class: "custom-control-input") + '<span class="custom-control-indicator"></span><span class="custom-control-description">'.html_safe + button.text + '</span>'.html_safe } %>
+    <% end %>
+  </div>
+
   <div class="form-group">
     <%= f.collection_select :topic_id, Topic.all, :id, :title, { :prompt => 'Please select a topic' }, class: 'custom-select', 'aria-label': 'Topic' %>
   </div>
