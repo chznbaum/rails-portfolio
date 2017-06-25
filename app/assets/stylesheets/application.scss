@@ -166,8 +166,11 @@ body {
  * Custom Styles
  */
 .card-block {
-  color: #000;
   color: rgba(0,0,0,0.875);
+
+  a {
+    color: rgba(0,0,0,0.875);
+  }
 
   form {
     text-align: left;
