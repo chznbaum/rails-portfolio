@@ -42,7 +42,7 @@ module ApplicationHelper
         title: 'Tech News'
       },
       {
-        url: contact_path,
+        url: new_message_path,
         title: 'Contact'
       },
     ]

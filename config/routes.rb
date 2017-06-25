@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
 
   get 'about', to: 'pages#about'
-  get 'contact', to: 'pages#contact'
+  get 'contact', to: 'messages#new', as: 'new_message'
+  post 'contact', to: 'messages#create', as: 'create_message'
   get 'tech-news', to: 'pages#tech_news'
 
   resources :topics, only: [:index, :show]
