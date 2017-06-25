@@ -18,8 +18,8 @@
 }
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #555;
+  font-family: AvenirNextPro;
+  color: rgba(0,0,0,0.75);
 }
 
 h1, .h1,
@@ -28,9 +28,8 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  color: #333;
+  font-weight: bold;
+  color: rgba(0,0,0,0.875);
 }
 
 
@@ -98,7 +97,6 @@ h6, .h6 {
 .blog-title {
   margin-bottom: 0;
   font-size: 2rem;
-  font-weight: normal;
 }
 .blog-description {
   font-size: 1.1rem;
