@@ -1,8 +1,16 @@
-<div class="blog-masthead">
-    <div class="container">
-        <nav class="nav blog-nav">
-            <%= nav_helper 'nav-link', 'span' %>
-            <%= login_helper 'nav-link' %>
-        </nav>
-    </div>
-</div>
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded blog-nav">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon">
+  </button>
+
+  <div class="container">
+    <%= link_to "Chazona Baum", root_path, class: 'navbar-brand' %>
+  </div>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <%= nav_helper 'nav-link', 'li' %>
+      <%= login_helper "nav-link" %>
+    </ul>
+  </div>
+</nav>
