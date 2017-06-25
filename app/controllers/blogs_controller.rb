@@ -4,7 +4,7 @@ class BlogsController < ApplicationController
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, site_admin: :all
 
   def index
-    @blogs = Blog.by_recent.page(params[:page]).per(5)
+    @blogs = Blog.protect_drafts(current_user).by_recent.page(params[:page]).per(5)
     @page_title = "Blog"
   end
 

@@ -9,6 +9,16 @@ class Blog < ApplicationRecord
 
   has_many :comments, dependent: :destroy
 
+  scope :hide_drafts, -> { where(status: 'published') }
+
+  def self.protect_drafts user
+    if user.has_role?(:site_admin)
+      all
+    else
+      hide_drafts
+    end
+  end
+
   def self.by_recent
     order("created_at DESC")
   end

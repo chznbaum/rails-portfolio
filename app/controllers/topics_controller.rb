@@ -7,7 +7,7 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find(params[:id])
-    @blogs = @topic.blogs.by_recent.page(params[:page]).per(5)
+    @blogs = @topic.blogs.protect_drafts(current_user).by_recent.page(params[:page]).per(5)
     @page_title = "Blogs Filed Under #{@topic.title}"
   end
 end
