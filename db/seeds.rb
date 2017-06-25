@@ -17,7 +17,8 @@ puts "#{Topic.count} topics created."
   Blog.create!(
     title: Faker::Lorem.words(5).join(" "),
     body: Faker::Lorem.sentences(20).join(" "),
-    topic_id: rand(1..8)
+    topic_id: rand(1..8),
+    status: rand(0..1)
   )
 end
 
