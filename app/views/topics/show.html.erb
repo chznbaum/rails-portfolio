@@ -1,5 +1,8 @@
 <div class="col-sm-8 blog-main">
-  
+  <nav class="breadcrumb">
+    <%= link_to 'Home', root_url, class: "breadcrumb-item" %>
+    <span class="breadcrumb-item active"><%= @topic.title %></span>
+  </nav>
   <h2 class="blog-post-title topic-title"><%= @topic.title %></h2>
 
   <%= paginate @blogs %>
