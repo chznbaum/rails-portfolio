@@ -233,3 +233,11 @@ body {
     padding: 0.5em;
   }
 }
+
+.progress {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  .progress-bar {
+    height: 2em;
+  }
+}

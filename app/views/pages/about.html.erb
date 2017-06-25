@@ -13,6 +13,18 @@
         <p>My two young children help shape my perspective, and drive me to create experiences that are accessible, friendly, and with a hint of magic.</p>
 
         <p>My love of code sprang from my love of language. Where some see confusing symbols, I see an elegant form of communication and expression, and a way for people to extend their capabilities and accomplish the previously impossible.</p>
+        <h2>Skills</h2>
+        <div class="row">
+          <% Skill.all.each do |skill| %>
+            <div class="col-6">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: #{skill.percent_utilized}%;" aria-valuenow="#{skill.percent_utilized}" aria-valuemin="0" aria-valuemax="100">
+                  <%= skill.title %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
