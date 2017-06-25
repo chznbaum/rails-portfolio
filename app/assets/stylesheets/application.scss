@@ -134,7 +134,7 @@ h6, .h6 {
  */
 
 .mastfoot {
-  color: rgba(0,0,0,.5);
+  color: rgba(0,0,0,0.875);
   .inner {
     p {
       display: inline-block;
@@ -182,9 +182,9 @@ h6, .h6 {
  */
 .card {
   background-color: rgba(245,245,245,1);
+  border: solid 1px rgba(0,0,0,0.2);
   a {
     color: #0275d8;
-    text-decoration: none;
   }
 }
 
@@ -239,11 +239,7 @@ h6, .h6 {
 .profile-image {
   border-radius: 50%;
   background-color: rgba(0,0,0,0.3);
-  border: solid 1px rgba(0,0,0,0.5);
-}
-
-.app-footer {
-  color: rgba(0,0,0,0.875);
+  border: solid 1px rgba(0,0,0,0.2);
 }
 
 .tech-news {
@@ -256,6 +252,7 @@ h6, .h6 {
 .progress {
   margin-top: 0.25em;
   margin-bottom: 0.25em;
+  border: solid 1px rgba(0,0,0,0.2);
   .progress-bar {
     height: 2em;
     .progress-label {
