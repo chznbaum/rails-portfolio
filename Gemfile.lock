@@ -91,6 +91,8 @@ GEM
     equalizer (0.0.11)
     erubis (2.7.0)
     execjs (2.7.0)
+    faker (1.7.3)
+      i18n (~> 0.5)
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
@@ -252,6 +254,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise (~> 4.2, >= 4.2.1)
   dotenv-rails (~> 2.1, >= 2.1.1)
+  faker
   font-awesome-rails (~> 4.7, >= 4.7.0.1)
   friendly_id (~> 5.1.0)
   gritter (~> 1.2)
