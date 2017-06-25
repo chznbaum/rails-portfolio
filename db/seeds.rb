@@ -26,7 +26,7 @@ puts "#{Blog.count} blog posts created."
 5.times do |skill|
   Skill.create!(
     title: Faker::Lorem.characters(6),
-    percent_utilized: 15
+    percent_utilized: rand(25..100)
   )
 end
 

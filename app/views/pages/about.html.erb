@@ -18,8 +18,8 @@
           <% Skill.all.each do |skill| %>
             <div class="col-6">
               <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: #{skill.percent_utilized}%;" aria-valuenow="#{skill.percent_utilized}" aria-valuemin="0" aria-valuemax="100">
-                  <%= skill.title %>
+                <div class="progress-bar" role="progressbar" style="width:<%= skill.percent_utilized %>%;" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemin="0" aria-valuemax="100">
+                  <span class="progress-label"><%= skill.title %></span>
                 </div>
               </div>
             </div>
