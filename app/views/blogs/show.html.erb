@@ -1,7 +1,7 @@
 <div class="col-sm-8 blog-main">
 
   <h2 class="blog-post-title"><%= @blog.title %></h2>
-  <p class="blog-post-meta">Published <%= distance_of_time_in_words(@blog.created_at, Time.now) %> ago</a></p>
+  <p class="blog-post-meta">Published <%= distance_of_time_in_words(@blog.created_at, Time.now) %> ago</a><span class="pull-right"><%= pluralize(@blog.comments.count, 'comment') %></span></p>
 
   <nav class="breadcrumb">
     <%= link_to 'Home', root_url, class: "breadcrumb-item" %>
@@ -22,6 +22,6 @@
   <%= render 'comments/comment_form' %>
 
   <div id="comments" data-blog-id="<%= @blog.id %>">
-    <%= render @blog.comments %>
+    <%= render @blog.comments.by_recent %>
   </div>
 </div><!-- /.blog-main -->

@@ -12,7 +12,7 @@
 
   <div class="form-group">
     <%= f.label :created_at, 'Publish Date' %>
-    <%= f.date_field :created_at, class: 'form-control' %>
+    <%= f.date_field :created_at, value: (blog.created_at || Time.now) , class: 'form-control' %>
   </div>
 
   <div>
