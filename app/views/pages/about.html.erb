@@ -1,22 +1,11 @@
-<h1><%= @page_title %></h1>
-
-<hr>
-<div class="card">
+<div class="card card-left">
   <div class="card-block">
     <div class="row">
       <div class="col-md-4">
-        <%= image_tag image_path("chazona.png"), width: 300, class: "profile-image", alt: "profile image" %>
-      </div>
-      <div class="col-md-8">
-        <p>My name is Chazona Baum, and I am a self-taught full-stack developer with diverse experiences in industries ranging from food service to veterinary medicine to insurance.</p>
-
-        <p>My two young children help shape my perspective, and drive me to create experiences that are accessible, friendly, and with a hint of magic.</p>
-
-        <p>My love of code sprang from my love of language. Where some see confusing symbols, I see an elegant form of communication and expression, and a way for people to extend their capabilities and accomplish the previously impossible.</p>
-        <h2>Skills</h2>
+        <%= image_tag image_path("chazona.png"), width: 200, class: "profile-image d-block mx-auto", alt: "profile image" %>
         <div class="row">
           <% Skill.all.each do |skill| %>
-            <div class="col-6">
+            <div class="col-12">
               <div class="progress">
                 <div class="progress-bar" role="progressbar" style="width:<%= skill.percent_utilized %>%;" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemin="0" aria-valuemax="100">
                   <span class="progress-label"><%= skill.title %></span>
@@ -24,6 +13,94 @@
               </div>
             </div>
           <% end %>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <p>My name is Chazona Baum, and I am a self-taught full-stack developer with diverse experiences in industries ranging from food service to veterinary medicine to insurance.</p>
+
+        <p>My two young children help shape my perspective, and drive me to create experiences that are accessible, friendly, and with a hint of magic.</p>
+
+        <p>My love of code sprang from my love of language. Where some see confusing symbols, I see an elegant form of communication and expression, and a way for people to extend their capabilities and accomplish the previously impossible.</p>
+
+        <p>
+          <button 
+            class="btn btn-primary" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#experience" 
+            area-expanded="false" 
+            aria-controls="experience"
+          >
+            Experience
+          </button>
+
+          <button 
+            class="btn btn-primary" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#education" 
+            area-expanded="false" 
+            aria-controls="education"
+          >
+            Education
+          </button>
+
+          <button 
+            class="btn btn-primary" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#featuredIn" 
+            area-expanded="false" 
+            aria-controls="featuredIn"
+          >
+            Featured In
+          </button>
+        </p>
+        <div class="collapse" id="experience">
+          <div class="card card-block">
+            <div class="row">
+              <div class="col-2">
+                <%= image_tag image_path("logo_white_background_square.jpg"), class: "img-fluid", alt: "Midlothian Code logo" %>
+              </div>
+              <div class="col-10">
+                <strong>Organizer/Web Developer</strong> - Lead the creation, growth and events of local code meetup Midlothian Code, as well as developing <%= link_to 'its website', 'https://midlothiancode.com' %>.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="collapse" id="education">
+          <div class="card card-block">
+            <div class="row">
+              <div class="col-2">
+                <%= image_tag image_path("freecodecamp.png"), class: "img-fluid", alt: "freeCodeCamp logo" %>
+              </div>
+              <div class="col-10">
+                Currently utilizing freeCodeCamp's computer software engineering program and working toward a full stack web development certification.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="collapse" id="featuredIn">
+          <div class="card card-block">
+            <div class="row">
+              <div class="col-2">
+                <%= image_tag image_path("devlogo.png"), class: "img-fluid", alt: "The Practical Dev logo" %>
+              </div>
+              <div class="col-10">
+                Featured on the front page of <%= link_to 'dev.to()', 'https://dev.to' %> as well as <%= link_to '@ThePracticalDev', 'https://twitter.com/ThePracticalDev' %> Twitter account for a <%= link_to 'blog post on web development without a computer', 'https://dev.to/chznbaum/roughing-it-dev-style-coding-without-a-computer' %>.
+              </div>
+            </div>
+          </div>
+          <div class="card card-block">
+            <div class="row">
+              <div class="col-2">
+                <%= image_tag image_path("codepenlogo.png"), class: "img-fluid", alt: "CodePen logo" %>
+              </div>
+              <div class="col-10">
+                Featured in the <%= link_to 'CodePen Spark', 'https://codepen.io/spark/16' %> for my custom-CSS profile page.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
