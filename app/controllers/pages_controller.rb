@@ -8,10 +8,6 @@ class PagesController < ApplicationController
     @page_title = "About Chazona"
   end
 
-  def contact
-    @page_title = "Contact"
-  end
-
   def tech_news
     @tweets = SocialTool.twitter_search
   end

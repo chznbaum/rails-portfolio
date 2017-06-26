@@ -9,6 +9,45 @@
     <meta name="author" content="Chazona Baum">
     <meta name="keywords" content="<%= @seo_keywords %>">
 
+    <%= favicon_link_tag 'favicons/favicon.ico' %>
+
+    <!--
+    /**
+    * @license
+    * MyFonts Webfont Build ID 3411196, 2017-06-25T08:41:11-0400
+    * 
+    * The fonts listed in this notice are subject to the End User License
+    * Agreement(s) entered into by the website owner. All other parties are 
+    * explicitly restricted from using the Licensed Webfonts(s).
+    * 
+    * You may obtain a valid license at the URLs below.
+    * 
+    * Webfont: AvenirNextLTPro-Regular by Linotype
+    * URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-regular/
+    * 
+    * Webfont: AvenirNextLTPro-It by Linotype
+    * URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-italic/
+    * 
+    * Webfont: AvenirNextLTPro-BoldIt by Linotype
+    * URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-bold-italic/
+    * 
+    * Webfont: AvenirNextLTPro-Bold by Linotype
+    * URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-bold/
+    * 
+    * 
+    * License: https://www.myfonts.com/viewlicense?type=web&buildid=3411196
+    * Licensed pageviews: 250,000
+    * Webfonts copyright: Copyright &#x00A9; 2004 - 2007 Linotype GmbH, www.linotype.com.
+    * All rights reserved. This font software may not be reproduced, modified, disclosed or
+    * transferred without the express written approval of Linotype GmbH. Avenir is a
+    * trademark of Linotype GmbH
+    * 
+    * © 2017 MyFonts Inc
+    */
+
+    -->
+    <%= stylesheet_link_tag    'fonts/Chazona_Baum_Portfolio', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -20,27 +59,29 @@
 
         <div class="cover-container">
           <% if current_page?(root_path) %>
+            <div id="background"></div>
             <%= video_tag(
-              'sketch.vid',
-              id: 'background',
+              'https://s3.amazonaws.com/chazona-portfolio-bucket/uploads/assets/videos/sketch.mp4',
+              id: 'background-video',
               autoplay: true,
               loop: true,
               muted: true,
-              poster: 'sketch.jpg'
+              poster: 'https://s3.amazonaws.com/chazona-portfolio-bucket/uploads/assets/images/sketch.jpg'
             ) %>
+            <div id="background-overlay"></div>
           <% else %>
             <div id="background"></div>
             <div id="background-overlay"></div>
           <% end %>
-          <%= render "shared/application_nav" %>
+          <div class="flex-column-center">
+            <%= render "shared/portfolio_nav" %>
           
-          <%= yield %>
+            <%= yield %>
           
-          <%= render "shared/application_footer" %>
+            <%= render "shared/application_footer" %>
+          </div>
 
           <%= alerts %>
-          
-          <%= source_helper("application") %>
         </div>
       </div>
     </div>

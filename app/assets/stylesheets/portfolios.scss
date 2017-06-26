@@ -8,11 +8,21 @@
 @import "gritter";
 
 body {
+  font-family: AvenirNextPro;
   min-height: 75rem; /* Can be removed; just added for demo purposes */
 }
 
 img {
   object-fit: cover;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-weight: bold;
 }
 
 .navbar {
@@ -47,10 +57,11 @@ img {
 
 .card {
   float: left;
-  width: 33.333%;
+  width: 100%;
   padding: .75rem;
   margin-bottom: 2rem;
   border: 0;
+  height: 350px;
 }
 
 .card > img {
@@ -75,4 +86,20 @@ footer p {
  */
 .portfolio-container {
   padding-top: 20px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+#navbarHeader {
+  p {
+    color: rgba(255,255,255,0.75);
+  }
+}
+
+.btn.btn-primary {
+  @media screen and (max-width: 700px) {
+    margin-bottom: 1em;
+  }
 }

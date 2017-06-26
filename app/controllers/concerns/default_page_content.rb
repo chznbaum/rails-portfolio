@@ -8,5 +8,6 @@ module DefaultPageContent
     def set_page_defaults
         @page_title = "Personal Website of Chazona Baum"
         @seo_keywords = "Chazona Baum portfolio"
+        @all_topics = Topic.order(title: :asc)
     end
 end

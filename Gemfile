@@ -38,6 +38,7 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'faker'
 end
 
 group :development do
@@ -93,3 +94,7 @@ gem 'twitter', '~> 6.1'
 
 # Comments
 gem 'redis', '~> 3.3', '>= 3.3.3'
+
+# Markdown and Syntax Highlighting
+gem 'redcarpet', '~> 3.4'
+gem 'coderay', '~> 1.1', '>= 1.1.1'
