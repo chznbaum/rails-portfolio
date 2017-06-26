@@ -4,6 +4,7 @@
       <%= image_tag image_path("chazona.png"), class: "profile-image img-fluid", alt: "profile image" %>
       <p>My name is Chazona Baum, and I am a self-taught full-stack developer with diverse experiences in industries ranging from food service to veterinary medicine to insurance.</p>
     </div>
+    <%= source_helper("alert alert-info") %>
     <div class="sidebar-module">
       <h4>Elsewhere</h4>
       <ol class="list-unstyled social-links">
@@ -20,8 +21,5 @@
           <li><%= link_to topic.title, topic %></li>
         <% end %>
       </ol>
-    </div>
-    <div class="sidebar-module">
-      <%= source_helper("blog") %>
     </div>
 </div><!-- /.blog-sidebar -->
