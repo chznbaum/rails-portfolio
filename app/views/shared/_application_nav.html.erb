@@ -1,9 +1,25 @@
-<div class="masthead clearfix">
-    <div class="inner">
-        <h3 class="masthead-brand">Chazona Baum</h3>
-        <nav class="nav nav-masthead app-nav">
-            <%= nav_helper 'nav-link', 'span' %>
-            <%= login_helper "nav-link" %>
-        </nav>
+<div class="collapse bg-inverse" id="navbarHeader">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 py-4">
+                <h4 class="text-white">Full Stack Web Development</h4>
+                <p>I am able to work with users and developers, across the stack and at various points of the creative process.</p>
+            </div>
+            <div class="col-sm-4 py-4">
+                <h4 class="text-white">Explore</h4>
+                <ul class="list-unstyled">
+                    <%= nav_helper 'text-white', 'li' %>
+                    <%= login_helper 'text-white', 'li' %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="navbar navbar-inverse bg-inverse">
+    <div class="container d-flex justify-content-between">
+        <a href="<%= root_path %>" class="navbar-brand">Chazona Baum</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
     </div>
 </div>

@@ -1,8 +1,25 @@
 module ApplicationHelper
-  def login_helper style = ''
+
+  def login_helper style, tag_type
     if current_user.is_a?(GuestUser)
-      (link_to "Register", new_user_registration_path, class: style) + " " +
-      (link_to "Login", new_user_session_path, class: style)
+      login_items = [
+        {
+          url: new_user_registration_path,
+          title: 'Register'
+        },
+        {
+          url: new_user_session_path,
+          title: 'Login'
+        }
+      ]
+      login_links = []
+      login_items.each do |item|
+        login_links << content_tag(tag_type, (link_to item[:title], item[:url], class: style))
+      end
+
+      login_links = login_links.join('')
+
+      login_links.html_safe
     else
       link_to "Logout", destroy_user_session_path, method: :delete, class: style
     end
@@ -39,7 +56,7 @@ module ApplicationHelper
       },
       {
         url: tech_news_path,
-        title: 'Tech News'
+        title: 'News'
       },
       {
         url: new_message_path,

@@ -53,38 +53,6 @@ img {
   margin-bottom: 3rem;
 }
 
-/* Nav links */
-.nav-link {
-  position: relative;
-  padding: 1rem;
-  font-weight: 500;
-  color: #cdddeb;
-}
-.nav-link:hover,
-.nav-link:focus {
-  color: #fff;
-  background-color: transparent;
-}
-
-/* Active state gets a caret at the bottom */
-.nav-link.active {
-  color: #fff;
-}
-.nav-link.active:after {
-  position: absolute;
-  bottom: -.5em;
-  left: 50%;
-  width: 0;
-  height: 0;
-  margin-left: -.3rem;
-  vertical-align: middle;
-  content: "";
-  border-right: .6rem solid transparent;
-  border-bottom: .6rem solid rgba(255,255,255,1);
-  border-left: .6rem solid transparent;
-}
-
-
 /*
  * Blog name and description
  */
@@ -229,14 +197,24 @@ blockquote {
   }
 }
 
-.navbar-brand {
-  font-weight: bold;
-}
-
 .breadcrumb {
   background-color: #f5f5f5;
 }
 
 .alert.alert-info {
   margin-top: 1em;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+#navbarHeader {
+  p {
+    color: rgba(0,0,0,0.75);
+  }
+}
+
+.black-text {
+  color: rgba(0,0,0,0.875);
 }

@@ -59,24 +59,27 @@
 
         <div class="cover-container">
           <% if current_page?(root_path) %>
+            <div id="background"></div>
             <%= video_tag(
-              'sketch.vid',
-              id: 'background',
+              'https://s3.amazonaws.com/chazona-portfolio-bucket/uploads/assets/videos/sketch.mp4',
+              id: 'background-video',
               autoplay: true,
               loop: true,
               muted: true,
-              poster: 'sketch.jpg'
+              poster: 'https://s3.amazonaws.com/chazona-portfolio-bucket/uploads/assets/images/sketch.jpg'
             ) %>
             <div id="background-overlay"></div>
           <% else %>
             <div id="background"></div>
             <div id="background-overlay"></div>
           <% end %>
-          <%= render "shared/application_nav" %>
+          <div class="flex-column-center">
+            <%= render "shared/portfolio_nav" %>
           
-          <%= yield %>
+            <%= yield %>
           
-          <%= render "shared/application_footer" %>
+            <%= render "shared/application_footer" %>
+          </div>
 
           <%= alerts %>
         </div>

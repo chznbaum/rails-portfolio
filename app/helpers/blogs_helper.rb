@@ -5,18 +5,32 @@ module BlogsHelper
 
   class CodeRayify < Redcarpet::Render::HTML
     def block_code(code, language)
-      CodeRay.scan(code, language).div
+      if code and language
+        CodeRay.scan(code, language).div
+      end
     end
   end
 
   def markdown(text)
-    coderayified = CodeRayify.new(filter_html: true, hard_wrap: true)
+    coderayified = CodeRayify.new(escape_html: true, hard_wrap: true, with_toc_data: true)
 
     options = {
-      fenced_code_blocks: true,
       no_intra_emphasis: true,
+      tables: true,
+      fenced_code_blocks: true,
       autolink: true,
-      lax_html_blocks: true
+      disable_indented_code_blocks: true,
+      strikethrough: true,
+      lax_spacing: true,
+      space_after_headers: true,
+      superscript: true,
+      underline: true,
+      highlight: true,
+      quote: true,
+      footnotes: true,
+      lax_html_blocks: true,
+      with_toc_data: true
+
     }
 
     markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
