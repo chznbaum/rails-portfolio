@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
   def about
     @page_title = "About Chazona"
+    @skills = Skill.order(title: :asc)
   end
 
   def tech_news

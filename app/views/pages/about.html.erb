@@ -5,7 +5,7 @@
         <div class="col-md-4">
           <%= image_tag 'https://s3.amazonaws.com/chazona-portfolio-bucket/uploads/assets/images/chazona.png', width: 200, class: "profile-image d-block mx-auto", alt: "profile image" %>
           <div class="row">
-            <% Skill.all.each do |skill| %>
+            <% @skills.each do |skill| %>
               <div class="col-12">
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" style="width:<%= skill.percent_utilized %>%;" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemin="0" aria-valuemax="100">
