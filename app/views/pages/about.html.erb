@@ -25,7 +25,7 @@
 
           <p>
             <button 
-              class="btn btn-primary" 
+              class="btn btn-primary mb-3" 
               type="button" 
               data-toggle="collapse" 
               data-target="#experience" 
@@ -36,7 +36,7 @@
             </button>
 
             <button 
-              class="btn btn-primary" 
+              class="btn btn-primary mb-3" 
               type="button" 
               data-toggle="collapse" 
               data-target="#education" 
@@ -47,7 +47,7 @@
             </button>
 
             <button 
-              class="btn btn-primary" 
+              class="btn btn-primary mb-3" 
               type="button" 
               data-toggle="collapse" 
               data-target="#featuredIn" 
@@ -55,6 +55,26 @@
               aria-controls="featuredIn"
             >
               Featured In
+            </button>
+            <button 
+              class="btn btn-primary mb-3" 
+              type="button" 
+              data-toggle="collapse" 
+              data-target="#codingActivity" 
+              area-expanded="false" 
+              aria-controls="codingActivity"
+            >
+              Activity
+            </button>
+            <button 
+              class="btn btn-primary mb-3" 
+              type="button" 
+              data-toggle="collapse" 
+              data-target="#codingLanguages" 
+              area-expanded="false" 
+              aria-controls="codingLanguages"
+            >
+              Languages
             </button>
           </p>
           <div class="collapse" id="experience">
@@ -88,7 +108,7 @@
                   <%= image_tag 'https://s3.amazonaws.com/chazona-portfolio-bucket/uploads/assets/images/devlogo.png', class: "img-fluid", alt: "The Practical Dev logo" %>
                 </div>
                 <div class="col-10">
-                  Featured on the front page of <%= link_to 'dev.to()', 'https://dev.to' %> as well as <%= link_to '@ThePracticalDev', 'https://twitter.com/ThePracticalDev' %> Twitter account for a <%= link_to 'blog post on web development without a computer', 'https://dev.to/chznbaum/roughing-it-dev-style-coding-without-a-computer' %>.
+                  Featured on the front page of <%= link_to 'The Practical Dev', 'https://dev.to' %> as well as <%= link_to '@ThePracticalDev', 'https://twitter.com/ThePracticalDev' %> Twitter account for a <%= link_to 'blog post on web development without a computer', 'https://dev.to/chznbaum/roughing-it-dev-style-coding-without-a-computer' %>.
                 </div>
               </div>
             </div>
@@ -99,6 +119,24 @@
                 </div>
                 <div class="col-10">
                   Featured in the <%= link_to 'CodePen Spark', 'https://codepen.io/spark/16' %> for my custom-CSS profile page.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapse" id="codingActivity">
+            <div class="card card-block card-wakatime">
+              <div class="row">
+                <div class="col-12">
+                  <figure><embed src="https://wakatime.com/share/@chznbaum/1aac19c3-ff53-447f-b840-d3a98a5a425e.svg"></embed></figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapse" id="codingLanguages">
+            <div class="card card-block card-wakatime">
+              <div class="row">
+                <div class="col-12">
+                  <figure><embed src="https://wakatime.com/share/@chznbaum/666ca127-6668-4d0f-85ce-b45614caced9.svg"></embed></figure>
                 </div>
               </div>
             </div>
