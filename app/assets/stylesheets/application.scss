@@ -72,7 +72,7 @@ h6, .h6 {
 .cover-container {
   margin-right: auto;
   margin-left: auto;
-  min-height: 150vh;
+  min-height: 100vh;
 }
 
 /* Padding for spacing */
@@ -109,7 +109,6 @@ h6, .h6 {
 .mastfoot {
   color: rgba(0,0,0,0.875);
   z-index: -1;
-  height: 30vw;
 }
 
 //.navbar,
@@ -299,4 +298,14 @@ h6, .h6 {
 
 .fa.fa-star {
   color: rgb(255,250,134);
+}
+
+.btn-inverse {
+  background-color: #292b2c;
+  color: #FFFFFF;
+
+  &:hover, &:focus {
+    color: #FFFFFF;
+    background-color: darken(#292b2c, 10%);
+  }
 }
