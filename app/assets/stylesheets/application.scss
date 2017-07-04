@@ -1,5 +1,6 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+@import "font-awesome";
 @import "gritter";
 
 /*
@@ -279,4 +280,23 @@ h6, .h6 {
 
 .card-wakatime {
   background-color: rgba(255,255,255,1);
+}
+
+.card-resume {
+  background-color: rgba(255,255,255,1);
+}
+
+#resume {
+  padding: 2em;
+  line-height: 1.75em;
+  section {
+    padding-bottom: 2em;
+  }
+  h2, h3 {
+    padding-bottom: 1em;
+  }
+}
+
+.fa.fa-star {
+  color: rgb(255,250,134);
 }

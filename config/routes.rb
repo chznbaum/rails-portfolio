@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'messages#new', as: 'new_message'
   post 'contact', to: 'messages#create', as: 'create_message'
   get 'tech-news', to: 'pages#tech_news'
+  get 'resume', to: 'pages#resume'
 
   resources :topics, only: [:index, :show]
 
