@@ -76,6 +76,16 @@
             >
               Languages
             </button>
+            <button 
+              class="btn btn-primary mb-3" 
+              type="button" 
+              data-toggle="collapse" 
+              data-target="#resume" 
+              area-expanded="false" 
+              aria-controls="resume"
+            >
+              Resume
+            </button>
           </p>
           <div class="collapse" id="experience">
             <div class="card card-block">
@@ -137,6 +147,15 @@
               <div class="row">
                 <div class="col-12">
                   <figure><embed src="https://wakatime.com/share/@chznbaum/666ca127-6668-4d0f-85ce-b45614caced9.svg"></embed></figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapse" id="resume">
+            <div class="card card-block card-wakatime">
+              <div class="row">
+                <div class="col-12">
+                  <%= render 'shared/resume' %>
                 </div>
               </div>
             </div>
