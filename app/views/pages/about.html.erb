@@ -6,9 +6,9 @@
           <%= image_tag 'https://s3.amazonaws.com/chazona-portfolio-bucket/uploads/assets/images/chazona.png', width: 200, class: "profile-image d-block mx-auto", alt: "profile image" %>
           <div class="row">
             <% @skills.each do |skill| %>
-              <div class="col-12">
+              <div class="col-md-6">
                 <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width:<%= skill.percent_utilized %>%;" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped" role="progressbar" style="width:<%= skill.percent_utilized %>%;" aria-valuenow="<%= skill.percent_utilized %>" aria-valuemin="0" aria-valuemax="100">
                     <span class="progress-label"><%= skill.title %></span>
                   </div>
                 </div>
