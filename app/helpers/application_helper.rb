@@ -47,6 +47,10 @@ module ApplicationHelper
         title: 'About'
       },
       {
+        url: resume_path,
+        title: 'Resume'
+      },
+      {
         url: portfolios_path,
         title: 'Portfolio'
       },
