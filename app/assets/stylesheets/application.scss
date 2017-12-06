@@ -293,12 +293,34 @@ h6, .h6 {
 #resume {
   padding: 2em;
   line-height: 1.75em;
+  font-size: .9em;
   section {
     padding-bottom: 2em;
   }
   h2, h3 {
     padding-bottom: 1em;
   }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.25em;
+  }
+
+  .resume-name {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  .resume-experience-item {
+    font-weight: bold;
+  }
+}
+
+.break-word {
+  word-wrap: break-word;
 }
 
 .fa.fa-star {
