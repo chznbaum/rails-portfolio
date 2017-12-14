@@ -99,4 +99,7 @@ gem 'redis', '~> 3.3', '>= 3.3.3'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.1'
 
+# HAML Syntax
+gem 'haml', '~> 5.0', '>= 5.0.4'
+
 ruby "~> 2.4.0"
