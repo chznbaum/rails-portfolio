@@ -1,0 +1,9 @@
+.blog-post
+  %h2.blog-post-title= link_to blog.title, blog
+  %p.blog-post-meta= "Published #{distance_of_time_in_words blog.created_at, Time.now} ago"
+  %p= pluralize blog.comments.count, "comment"
+
+  = render partial: 'blogs/admin_actions', locals: {:blog => blog}
+
+  %div
+    = markdown blog.body

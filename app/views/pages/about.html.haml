@@ -1,0 +1,14 @@
+%div
+  = image_tag "https://s3.amazonaws.com/chazona-portfolio-bucket/uploads/assets/images/chazona.png", alt: "profile image", width: '200'
+%div
+  - @skills.each do |skill|
+    %div
+      %span= skill.title
+      %span= skill.percent_utilized
+%div
+  %p= "My name is Chazona Baum, and I am a self-taught full-stack developer with diverse experiences in industries ranging from food service to veterinary medicine to insurance."
+  %p= "My love of code sprang from my love of language. Where some see confusing symbols, I see an elegant form of communication and expression, and a way for people to extend their capabilities and accomplish the previously impossible."
+  %p= "I intend to utilize my customer-centric background and technical skills to build a career in advocacy and developer relations."
+  %p
+    :markdown
+      To see what I'm doing now, check out my [#100DaysOfCode Log](https://hundred-days.herokuapp.com/logs).

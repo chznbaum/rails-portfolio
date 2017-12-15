@@ -1,0 +1,16 @@
+%div
+  %h4= link_to "About", about_path
+  = image_tag "https://s3.amazonaws.com/chazona-portfolio-bucket/uploads/assets/images/chazona.png", :alt => "profile image"
+  %p= "My name is Chazona Baum, and I am a self-taught full-stack developer with diverse experiences in industries ranging from food service to veterinary medicine to insurance."
+  = source_helper "alert alert-info"
+  %h4= "Elsewhere"
+  %ol
+    %li= link_to fa_icon("github"), "https://github.com/chznbaum"
+    %li= link_to fa_icon("codepen"), "https://codepen.io/chznbaum"
+    %li= link_to fa_icon("twitter"), "https://twitter.com/chznbaum"
+    %li= link_to fa_icon("linkedin"), "https://www.linkedin.com/in/chznbaum"
+  %h4= link_to "Topics", topics_path
+  %ol
+    - @all_topics.each do |topic|
+      %li= link_to topic.title, topic
+        

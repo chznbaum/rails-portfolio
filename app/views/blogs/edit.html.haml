@@ -1,0 +1,6 @@
+%div
+  %h1= "Editing #{@blog.title}"
+  = render 'form', blog: @blog
+
+  = link_to 'View Post', @blog
+  = link_to 'Back to Blog', blogs_path

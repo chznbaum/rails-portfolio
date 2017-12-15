@@ -1,0 +1,5 @@
+%div
+  = image_tag portfolio_img(portfolio_item.thumb_image, "thumb"), alt: "#{[portfolio_item.title]}", height: "auto"
+  %h3
+    = link_to portfolio_item.title, portfolio_show_path(portfolio_item)
+    %small= portfolio_item.subtitle

@@ -1,0 +1,4 @@
+= source_helper "alert alert-info"
+%div{:class => "row #{'sortable' if logged_in?(:site_admin)}"}
+  = render :partial => "portfolio_item", :collection => @portfolio_items
+  

@@ -1,0 +1,72 @@
+!!!
+%html
+  %head
+    %meta{"name" => "charset", "content" => "utf-8"}
+    %meta{"name" => "viewport", "content" => "width=device-width", "initial-scale" => 1, "shrink-to-fit" => "no"}
+    %title= @page_title
+    = csrf_meta_tags
+    %meta{"name" => "description", "content" => ""}
+    %meta{"name" => "author", "content" => "Chazona Baum"}
+    %meta{"name" => "keywords", "content" => ""}
+    %meta{"name" => "twitter:card", "content" => "summary_large_image"}
+    %meta{"name" => "twitter:site", "content" => "@chznbaum"}
+    %meta{"name" => "twitter:creator", "content" => "@chznbaum"}
+    %meta{"name" => "twitter:title", "content" => @page_title}
+    %meta{"name" => "twitter:description", "content" => "The personal portfolio site of Chazona Baum, full stack developer."}
+    %meta{"name" => "twitter:image", "content" => "https://https://s3.amazonaws.com/chazona-portfolio-bucket/uploads/assets/images/typing.jpg"}
+    = favicon_link_tag 'favicons/favicon.ico'
+
+    /
+      @license
+      Myfonts Webfont Build ID 3411196, 2017-06-25T08:41:11-0400
+
+      The fonts listed in this notice are subject to the End User License
+      Agreement(s) entered into by the website owner. All other parties are 
+      explicitly restricted from using the Licensed Webfonts(s).
+
+      You may obtain a valid license at the URLs below.
+
+      Webfont: AvenirNextLTPro-Regular by Linotype
+      URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-regular/
+
+      Webfont: AvenirNextLTPro-It by Linotype
+      URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-italic/
+
+      Webfont: AvenirNextLTPro-BoldIt by Linotype
+      URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-bold-italic/
+
+      Webfont: AvenirNextLTPro-Bold by Linotype
+      URL: https://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-bold/
+
+      License: https://www.myfonts.com/viewlicense?type=web&buildid=3411196
+      Licensed pageviews: 250,000
+      Webfonts copyright: Copyright &#x00A9; 2004 - 2007 Linotype GmbH, www.linotype.com.
+      All rights reserved. This font software may not be reproduced, modified, disclosed or
+      transferred without the express written approval of Linotype GmbH. Avenir is a
+      trademark of Linotype GmbH
+
+      © 2017 MyFonts Inc
+
+    = stylesheet_link_tag 'fonts/Chazona_Baum_Portfolio', media: 'all', 'data-turbolinks-track': 'reload'
+
+    = stylesheet_link_tag 'portfolios', media: 'all', 'data-turbolinks-track': 'reload'
+
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-87914773-1', 'auto');
+      ga('send', 'pageview');
+
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  %body
+    = render "shared/portfolio_nav"
+    = render "shared/portfolio_masthead" unless logged_in?(:site_admin)
+    = yield
+    = render "shared/portfolio_footer"
+
+    = alerts
+    

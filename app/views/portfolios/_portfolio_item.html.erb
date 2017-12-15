@@ -1,8 +1,0 @@
-<div class="col-md-4">
-  <div class="card" data-id="<%= portfolio_item.id %>">
-    <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), height: "auto", alt: "#{portfolio_item.title} Screenshot" %>
-    <h3><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %><br>
-    <small><%= portfolio_item.subtitle %></small>
-    </h3>
-  </div>
-</div>

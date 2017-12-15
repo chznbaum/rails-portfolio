@@ -1,0 +1,7 @@
+%footer
+  %p
+    = link_to "Add new project | ", new_portfolio_path if logged_in?(:site_admin)
+    = link_to "View all projects", portfolios_path
+    = link_to "Back to top", "#"
+  %p= copyright_generator
+    
