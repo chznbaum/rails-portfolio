@@ -1,0 +1,64 @@
+*
+  box-sizing: border-box
+
+html
+  max-width: 100%
+  font-family: $fontFamilyBase
+  color: $textDarkPrimary
+
+body
+  max-width: 100%
+
+a
+  text-decoration: none
+  color: $darkColor
+  text-shadow: 0 .025rem .05rem rgba($darkColor, .3)
+
+img
+  max-width: 100%
+  height: auto
+
+  &.img--full-height
+    height: 100vh
+    width: 100%
+    object-fit: cover
+    object-position: center center
+  
+  &.img--absolute-br
+    position: absolute
+    bottom: 0
+    right: 0
+
+  &.img--background
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: -2
+  
+  &.img--background-until-medium
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: -2
+
+    +atMedium
+      position: relative
+      height: 100vh
+  
+  &.img--backward-until-medium
+    opacity: .3
+    pointer-events: none
+
+    +atMedium
+      opacity: 1
+  
+  &.img--grayscaled
+    filter: grayscale(1)
+
+em
+  font-family: $fontFamilyHeadings
+  font-size: 1.65em
+  line-height: 0
+
+.relative
+  position: relative

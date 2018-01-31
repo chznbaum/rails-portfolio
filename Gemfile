@@ -24,7 +24,7 @@ gem 'coffee-rails', '~> 4.2'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+# gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -58,9 +58,6 @@ gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.
 
 # Authentication
 gem 'devise', '~> 4.2', '>= 4.2.1'
-
-# Bootstrap
-gem 'bootstrap', '~> 4.0.0.alpha6'
 
 # View Methods
 gem 'chznbaum_view_tool', '~> 0.1.0'
@@ -98,5 +95,8 @@ gem 'redis', '~> 3.3', '>= 3.3.3'
 # Markdown and Syntax Highlighting
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.1'
+
+# HAML Syntax
+gem 'haml', '~> 5.0', '>= 5.0.4'
 
 ruby "~> 2.4.0"

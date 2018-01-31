@@ -1,0 +1,28 @@
+= form_for @portfolio_item do |f|
+  - if @portfolio_item.errors.any?
+    - @portfolio_item.errors.full_messages.each do |error|
+      = alert_generator error, :error, "Error"
+  %div
+    = f.label :title
+    = f.text_field :title
+  %div
+    = f.label :subtitle
+    = f.text_field :subtitle
+  %div
+    = f.label :main_image, "Main Image URL"
+    = f.file_field :main_image
+  %div
+    = f.label :thumb_image, "Thumbnail Image URL"
+    = f.file_field :thumb_image
+  %div
+    = f.label :body
+    = f.text_area :body, :rows => 13
+  %h2= "Technologies used:"
+  %div
+    = f.fields_for :technologies do |technology_form|
+      = render "technology_fields", :f => technology_form
+    %div
+      = link_to_add_association "Add Technology", f, :technologies
+  %div
+    = f.submit
+    

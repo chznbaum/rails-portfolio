@@ -1,0 +1,5 @@
+- unless current_user.is_a? GuestUser
+  = form_for @comment, url: "#" do |f|
+    %div
+      = f.text_area "content", "aria-label" => "Comment Content"
+    = f.submit "Post Comment"

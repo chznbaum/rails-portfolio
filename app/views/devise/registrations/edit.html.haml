@@ -1,0 +1,34 @@
+%h2= "Edit #{resource_name.to_s.humanize}"
+= form_for resource, :as => resource_name, :url => registration_path(resource_name), :html => {:method => :put} do |f|
+  = devise_error_messages!
+  %div
+    = f.label :name
+    = f.text_field :name, :autofocus => true
+    %small= "First and last name"
+  %div
+    = f.label :email
+    = f.email_field :email
+    %small= "We'll never share your email with anyone else"
+  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+    %div= "currently awaiting confirmation for: #{resource.unconfirmed_email}"
+  %div
+    = f.label :password
+    = f.password_field :password, :autocomplete => "off"
+    %small
+      -if @minimum_password_length
+        %em= "#{@minimum_password_length} characters minimum"
+      = "Leave blank if you don't want to change it"
+  %div
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation, :autocomplete => "off"
+  %div
+    = f.label :current_password
+    = f.password_field :current_password, :autocomplete => "off"
+    %small= "We need your current password to confirm your changes"
+  %div
+    = f.submit "Update"
+%h2= "Danger Zone"
+%p
+  = "Want to cancel your account?"
+  = button_to 'Cancel my account', registration_path(resource_name), :data => {:confirm => "Are you sure you want to delete your account? This can't be undone."}, :method => :delete
+= link_to "Back", :back

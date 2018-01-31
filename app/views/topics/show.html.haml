@@ -1,0 +1,7 @@
+%h2= @topic.title
+%nav.breadcrumb
+  = link_to "Home", root_url, :class => "breadcrumb-item"
+  %span.breadcrumb-item= @topic.title
+= paginate @blogs
+= render @blogs
+= paginate @blogs

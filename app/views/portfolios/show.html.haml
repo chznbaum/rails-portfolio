@@ -1,0 +1,15 @@
+= image_tag portfolio_img(@portfolio_item.main_image, "main"), :alt => @portfolio_item.title, :width => "100%"
+.page-section
+  .container
+    %h2.section-title= @portfolio_item.title
+    %p= @portfolio_item.subtitle
+    .generic-content-container
+      %p= markdown @portfolio_item.body
+    %h3.section-title= "Technologies Used:"
+    %ul.technology-list
+    - @portfolio_item.technologies.each do |technology|
+      %li.technology-list__item= technology.name
+- if logged_in?(:site_admin)
+  .container
+    = link_to "Edit Item", edit_portfolio_path(@portfolio_item)
+    

@@ -1,0 +1,9 @@
+.page-section
+  %h2.section-title= link_to blog.title, blog
+  %p= "Published #{distance_of_time_in_words blog.created_at, Time.now} ago"
+  %p= pluralize blog.comments.count, "comment"
+
+  = render partial: 'blogs/admin_actions', locals: {:blog => blog}
+
+  %div
+    = markdown blog.body

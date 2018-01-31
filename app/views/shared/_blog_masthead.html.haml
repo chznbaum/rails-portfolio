@@ -1,0 +1,3 @@
+%h1= "Chazona's Blog"
+%p= "Web design, development and business."
+= link_to "Write a New Post", new_blog_path if logged_in?(:site_admin)

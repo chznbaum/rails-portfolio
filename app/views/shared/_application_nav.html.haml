@@ -1,0 +1,8 @@
+%nav.navbar
+  .container.container--full-height-until-medium
+    = link_to "Chazona Baum", root_path, :class => "navbar__logo"
+    .navbar__menu-icon
+      %i.navbar__menu-icon__bars
+    .navbar__menu-content
+      %ul
+        = nav_helper "", "li"

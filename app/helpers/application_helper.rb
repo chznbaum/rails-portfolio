@@ -4,12 +4,12 @@ module ApplicationHelper
     if current_user.is_a?(GuestUser)
       login_items = [
         {
-          url: new_user_registration_path,
-          title: 'Register'
-        },
-        {
           url: new_user_session_path,
           title: 'Login'
+        },
+        {
+          url: new_user_registration_path,
+          title: 'Register'
         }
       ]
       login_links = []
@@ -47,20 +47,12 @@ module ApplicationHelper
         title: 'About'
       },
       {
-        url: resume_path,
-        title: 'Resume'
-      },
-      {
         url: portfolios_path,
         title: 'Portfolio'
       },
       {
         url: blogs_path,
         title: 'Blog'
-      },
-      {
-        url: tech_news_path,
-        title: 'News'
       },
       {
         url: new_message_path,

@@ -1,0 +1,11 @@
+.row.row--short.relative
+  .row__medium-1-2
+    = image_tag 'https://s3.amazonaws.com/chazona-portfolio-bucket/uploads/assets/images/midlothian-code-mockup.jpg', :alt => 'Chazona Baum', :class => 'img--full-height img--background img--grayscaled'
+    .overlay.overlay--dark-color
+.page-section
+  .container
+    %h1.section-title= "Portfolio"
+    = source_helper "alert alert-info"
+    .row
+      = render :partial => "portfolio_item", :collection => @portfolio_items
+  

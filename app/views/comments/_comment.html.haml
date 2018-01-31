@@ -1,0 +1,5 @@
+%div
+  = gravatar_helper comment.user
+  = "Posted by #{comment.user.name} #{time_ago_in_words comment.created_at} ago"
+.generic-content-container
+  = markdown comment.content
