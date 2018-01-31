@@ -1,6 +1,49 @@
-%h1= "Web Experiences That Delight"
-%p= "Web Development by Chazona Baum"
-%p
-  = link_to "Learn More", about_path
-  = link_to "View My Portfolio", portfolios_path
+%div
+  .row.row--full-height
+    .row__medium-1-2
+      = image_tag "https://s3.amazonaws.com/chazona-portfolio-bucket/uploads/assets/images/typing.jpg", :alt => "woman typing on laptop computer", :class => "img--full-height img--background-until-medium"
+    .row__medium-1-2
+      .container.container--full-height.container--centered-vh.container--overlay-until-medium-dark
+        %h1.section-title= "Hi, I'm Chazona."
+        %p= "I build cool things for people on the web."
+        = link_to "Learn More", about_path, :class => "button button--outline"
+.page-section.page-section--light-accent.relative
+  .container.generic-content-container
+    %h2.section-title= "I'm results-driven and focused on the big picture."
+    .row
+      .row__medium-3-5
+        %p
+          = "Focused, driven and analytical, those who get to know me find I am bubbly, quirky and intensely curious. Sarcasm tends to go over my head."
+          %em= "I'm working on that one."
+        %p= "While I pride myself on making quality work a top priority, I work hard to ensure small details don't overshadow the big picture."
+        %p= "When I'm not coding, writing or stepping on my kids' legos, I can be found curled up with a mystery novel and a cold glass of sweet tea."
+        = link_to about_path do
+          :markdown
+            More about me ➡
+  = image_tag "https://s3.amazonaws.com/chazona-portfolio-bucket/uploads/assets/images/chazona_x1000.png", :height => "500", :width => "500", :alt => "Chazona Baum", :class => "img--absolute-br img--backward-until-medium reveal-item"
+.page-section
+  .container
+    %h2.section-title= "I believe in service over process and focusing on users."
+    %p= "I spent the past decade fighting for customers—getting to know what turns them off and what makes them glow with satisfaction. After observing time after time that many companies view their customers as an obstacle, I decided to pivot. Now I bring my user-centric experience to creating things for the web."
+    %p= "From time to time, I'll share useful tidbits from my own experience working with front- and back-end development."
+    = link_to blogs_path do
+      :markdown
+        More of my thoughts. ➡
+.page-section.page-section--dark-accent
+  .container
+    .row
+      .row__medium-2-5
+        %h2.section-title= "I design for phones first."
+        %p= "If you're not mobile, you're missing half your audience."
+        = link_to portfolios_path do
+          :markdown
+            More things I've made. ➡
   
+      .row__medium-3-5
+        = image_tag "https://s3.amazonaws.com/chazona-portfolio-bucket/uploads/assets/images/local-weather-app-mockup.png", :alt => "local weather app mockup", :class => "reveal-item"
+.page-section
+  .container.container--narrow.container--centered.generic-content-container
+    %h2.section-title= "Want to work together?"
+    %p
+      :markdown
+        Are you working on something useful and need a technical person who's your users' *best* advocate? I'd love to get involved. [Get in touch](#{new_message_path})

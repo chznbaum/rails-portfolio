@@ -1,0 +1,52 @@
+.container
+  padding-left: 1rem
+  padding-right: 1rem
+  max-width: 77.25rem
+  margin-left: auto
+  margin-right: auto
+
+  +atMedium
+    padding-left: 3rem
+    padding-right: 3rem
+
+  &--medium
+    max-width: 61rem
+  
+  &--narrow
+    max-width: 45rem
+
+  &--full-height
+    height: 100vh
+
+  &--full-height-until-medium
+    height: 100vh
+
+    +atMedium
+      height: unset
+
+  &--centered
+    text-align: center
+  
+  &--centered-vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+  
+  &--dark-color
+    background-color: $darkColor
+    color: $textLightPrimary
+  
+  &--light-color
+    background-color: $lightColor
+
+  &--dark-accent
+    background-color: $darkAccent
+
+  &--overlay-until-medium-dark
+    background-color: rgba($darkColor, .8)
+    color: $textLightPrimary
+
+    +atMedium
+      background-color: $darkColor

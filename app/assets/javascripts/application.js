@@ -14,9 +14,10 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require html.sortable
+//= require noframework.waypoints
+//= require MobileMenu
+//= require StickyNav
 //= require cocoon
 //= require gritter
 //= require cable
-//= require turbolinks
 //= require_tree .
-//= require bootstrap-sprockets

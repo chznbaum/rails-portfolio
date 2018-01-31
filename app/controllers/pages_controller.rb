@@ -8,11 +8,4 @@ class PagesController < ApplicationController
     @page_title = "About Chazona"
     @skills = Skill.order(title: :asc)
   end
-
-  def tech_news
-    @tweets = SocialTool.twitter_search
-  end
-
-  def resume
-  end
 end

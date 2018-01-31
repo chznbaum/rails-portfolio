@@ -1,0 +1,163 @@
+.navbar
+  position: absolute
+  width: 100%
+  z-index: 1
+  transition: background-color .3s ease
+
+  +atMedium
+    position: fixed
+  
+  & .container
+
+  & a
+    color: $textLightPrimary
+
+  & ul
+    list-style-type: none
+    padding-left: 0
+    display: inline-block
+    
+    +atMedium
+      float: right
+
+    & li
+      display: inline-block
+      margin-bottom: 1rem
+
+      +atMedium
+        margin-bottom: 0
+
+      & a
+        padding: 1rem 1rem 1rem 1rem
+        font-weight: 600
+        transition-property: padding, opacity
+        transition-duration: .3s, .3s
+        transition-timing-function: ease, ease
+
+        &:hover
+          opacity: .8
+
+      &:last-child
+        & a
+          padding: .75rem 1.2rem
+          display: inline-block
+          border: solid 3px $textLightPrimary
+          cursor: pointer
+          background-color: transparent
+          color: $textLightPrimary
+          transition: all .3s ease
+
+          &:hover
+            background-color: $textLightPrimary
+            color: $darkColor
+            opacity: 1
+
+  &__logo
+    font-family: $fontFamilyHeadings
+    font-size: 3rem
+    font-weight: 400
+    opacity: 0
+
+    +atMedium
+      float: left
+      padding-top: .5rem
+      margin-top: .5rem
+
+    +atMedium
+      transition: all .3s ease
+  
+  &--solid
+    background-color: $darkColor
+
+    & .navbar__logo
+      font-size: 2.25rem
+      opacity: 1
+
+    & ul li
+      & a
+        padding: .25rem 1rem .25rem 1rem
+
+      &:last-child
+        & a
+          padding: .25rem 1.2rem
+  &--is-expanded
+    background-color: $darkColor
+    padding-bottom: 1rem
+
+    +atMedium
+      padding-bottom: 0
+  
+  &__menu-icon
+    width: 1.25rem
+    height: 1.1875rem
+    position: absolute
+    top: .625rem
+    right: .625rem
+    z-index: 2
+
+    +atMedium
+      display: none
+    
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: .1875rem
+      background-color: $textLightPrimary
+      transition: all .3s ease
+    
+    &__bars
+      position: absolute
+      top: .5rem
+      left: 0
+      width: 100%
+      height: .1875rem
+      background-color: $textLightPrimary
+      transition: all .3s ease
+    
+    &::after
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: .1875rem
+      background-color: $textLightPrimary
+      transition: all .3s ease
+    
+    &--close-x
+      &::before
+        transform: rotate(45deg) scaleX(1.24)
+        transform-origin: top left
+      
+      &::after
+        transform: rotate(-45deg) scaleX(1.24)
+        transform-origin: bottom left
+    
+    &--close-x .navbar__menu-icon__bars
+      opacity: 0
+      transform: scaleX(0)
+      transform-origin: left
+  
+  &__menu-content
+    opacity: 0
+    padding-top: 6.25rem
+    text-align: center
+    position: relative
+    z-index: -1
+    transition: all .3s ease
+    height: 100%
+
+    +atMedium
+      opacity: 1
+      z-index: 1
+      padding-top: 0
+      height: unset
+    
+    &--unhidden
+      opacity: 1
+      z-index: 1
+      transform: scale(1)
+

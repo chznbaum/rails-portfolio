@@ -1,4 +1,12 @@
 %div
-  = paginate @blogs
-  = render @blogs
-  = paginate @blogs
+  .row.row--full-height.relative
+    .row__medium-1-2
+      = image_tag 'https://s3.amazonaws.com/chazona-portfolio-bucket/uploads/assets/images/front_end_books.jpg', :alt => 'Chazona Baum', :class => 'img--full-height img--background img--grayscaled'
+      .overlay.overlay--dark-color
+      .container.container--full-height.container--centered-vh
+        %h1.section-title= "Blog Posts"
+.page-section
+  .container
+    = paginate @blogs
+    = render @blogs
+    = paginate @blogs
