@@ -58,9 +58,10 @@ gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.
 
 # Authentication
 gem 'devise', '~> 4.2', '>= 4.2.1'
+gem 'rack-attack', '~> 5.0', '>= 5.0.1'
 
 # View Methods
-gem 'chznbaum_view_tool', '~> 0.1.0'
+gem 'chznbaum_view_tool', '~> 0.2.0'
 
 # Authorization
 gem 'petergate', '~> 1.7', '>= 1.7.3'
