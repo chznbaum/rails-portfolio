@@ -8,5 +8,5 @@
 .page-section
   .container
     = paginate @blogs
-    = render @blogs
+    = render partial: 'blog', collection: @blogs
     = paginate @blogs
