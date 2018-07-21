@@ -100,4 +100,4 @@ gem 'coderay', '~> 1.1', '>= 1.1.1'
 # HAML Syntax
 gem 'haml', '~> 5.0', '>= 5.0.4'
 
-ruby "~> 2.4.0"
+ruby "~> 2.5.0"
