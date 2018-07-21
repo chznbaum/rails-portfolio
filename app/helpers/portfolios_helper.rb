@@ -4,7 +4,7 @@ module PortfoliosHelper
   end
 
   def portfolio_img img, type
-    if img.model.main_image? || img.model.thumb_image?
+    if !img.nil?
       img
     elsif type == 'thumb'
       image_generator(width: '350', height: '200')

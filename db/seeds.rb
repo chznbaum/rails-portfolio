@@ -245,13 +245,13 @@ end
 puts "#{Skill.count} skills created."
 
 8.times do |portfolio_item|
-  Portfolio.create!(
+  @portfolio = Portfolio.create!(
     title: Faker::Lorem.words(5).join(" ").titlecase,
     subtitle: Faker::Lorem.words(5).join(" ").titlecase,
-    body: Faker::Lorem.sentences(20).join(" "),
-    main_image: "http://placehold.it/600x400",
-    thumb_image: "http://placehold.it/350x200"
+    body: Faker::Lorem.sentences(20).join(" ")
   )
+  @portfolio.main_image.attach(io: File.open("#{Rails.root}/app/assets/images/600x400.png"), filename: '600x400.png', content_type: 'image/png')
+  @portfolio.thumb_image.attach(io: File.open("#{Rails.root}/app/assets/images/350x200.png"), filename: '350x200.png', content_type: 'image/png')
 end
 
 puts "#{Portfolio.count} portfolio items created."

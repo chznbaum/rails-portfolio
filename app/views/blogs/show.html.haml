@@ -19,4 +19,4 @@
     %h3.section-title= "Comments"
     = render "comments/comment_form"
     #comments{"data-blog-id" => @blog.id}
-      = render partial: 'comment', collection: @blog.comments.by_recent
+      = render partial: 'comments/comment', collection: @blog.comments.by_recent

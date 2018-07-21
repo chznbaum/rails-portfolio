@@ -7,7 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.2'
+gem 'rails', '~> 5.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -76,6 +76,7 @@ gem 'kaminari', '~> 0.17.0'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 
 # Uploading
+gem 'aws-sdk-s3', '~> 1.17'
 gem 'carrierwave', '~> 1.1'
 gem 'carrierwave-aws', '~> 1.1'
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
@@ -91,7 +92,7 @@ gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 6.1'
 
 # Comments
-gem 'redis', '~> 3.3', '>= 3.3.3'
+gem 'redis', '~> 4.0', '>= 4.0.1'
 
 # Markdown and Syntax Highlighting
 gem 'redcarpet', '~> 3.4'
@@ -99,5 +100,8 @@ gem 'coderay', '~> 1.1', '>= 1.1.1'
 
 # HAML Syntax
 gem 'haml', '~> 5.0', '>= 5.0.4'
+
+# Load App Faster, new in Rails 5.2.0
+gem 'bootsnap', '~> 1.3', '>= 1.3.1'
 
 ruby "~> 2.5.0"

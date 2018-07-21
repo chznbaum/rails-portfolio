@@ -2,6 +2,12 @@
 
 This is the source code for [https://chazonabaum.com](https://chazonabaum.com?q=GitHub).
 
+## Prerequisites
+
+* Ruby 2.5
+* Rails 5.2
+* Postgresql
+
 ## Installation
 
 Clone the repository:
@@ -34,7 +40,58 @@ Populate your development database with sample data:
 rake db:seed
 ```
 
-Create a `.env` file and fill it with your environmental variables.
+Obtain a copy of the `master.key` or set your own with your own encrypted `credentials.yml.enc`. If setting your own, the following are required:
+
+```yaml
+development:
+  aws:
+    access_key_id:
+    region:
+    secret_access_key:
+    bucket_name:
+  twitter:
+    access_secret:
+    access_token:
+    consumer_key:
+    consumer_secret:
+  secret_key_base:
+  sendgrid:
+    username:
+    password:
+    api_key:
+staging:
+  aws:
+    access_key_id:
+    region:
+    secret_access_key:
+    bucket_name:
+  twitter:
+    access_secret:
+    access_token:
+    consumer_key:
+    consumer_secret:
+  secret_key_base:
+  sendgrid:
+    username:
+    password:
+    api_key:
+production:
+  aws:
+    access_key_id:
+    region:
+    secret_access_key:
+    bucket_name:
+  twitter:
+    access_secret:
+    access_token:
+    consumer_key:
+    consumer_secret:
+  secret_key_base:
+  sendgrid:
+    username:
+    password:
+    api_key:
+```
 
 Start your server:
 
@@ -42,16 +99,12 @@ Start your server:
 rails s
 ```
 
-### Notes
-
-- You will need Ruby v2.4, Rails v5.0, and PostgreSQL set up on your system before these steps
-
 ## Features
 
 - User authentication with Devise
 - Roles and authorization with Petergate
 - Gritter notifications
-- Skills progres bars
+- Skills progress bars
 - Collapsible experience/education info
 - Contact form for emails
 - Draft/published toggleable blog posts
@@ -68,7 +121,18 @@ rails s
 
 ## Credits
 
-This site would not have been possible without the phenomenal instruction of Jordan Hudgens. If you're learning Rails, you should really take [his course](https://www.udemy.com/professional-rails-5-development-course).
+Thanks goes to the following rubyists who came before me and have provided valuable insight used to build and maintain this application:
+
+* DHH
+* Michael Hartl
+* Jordan Hudgens
+* the DigitalOcean Community
+* RubyConf 2017
+* Engine Yard's Technical Evangelists
+* Andy Croll
+* Marcelo Casiraghi
+
+This list is not all-inclusive and there are many I've missed that I will back in add over time.
 
 ## License
 
