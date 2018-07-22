@@ -103,7 +103,7 @@ rails s
 
 - User authentication with Devise
 - Roles and authorization with Petergate
-- Gritter notifications
+- Dismissable flash notifications
 - Skills progress bars
 - Collapsible experience/education info
 - Contact form for emails
