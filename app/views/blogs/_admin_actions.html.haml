@@ -1,5 +1,8 @@
 - if logged_in?(:site_admin)
   %nav.breadcrumb.blogcrumb
-    = link_to fa_icon("file-text"), toggle_status_blog_path(blog), :class => "breadcrumb-item", :style => blog_status_color(blog)
-    = link_to fa_icon("pencil-square-o"), edit_blog_path(blog), :class => "breadcrumb-item"
-    = link_to fa_icon("trash"), blog, :method => :delete, :data => { confirm: 'Are you sure you want to delete that post?' }, :class => "breadcrumb-item"
+    = link_to toggle_status_blog_path(blog) do
+      %i{'class' => 'fa fa-file-text breadcrumb-item', 'style' => blog_status_color(blog)}
+    = link_to edit_blog_path(blog) do
+      %i.fa.fa-pencil-square-o.breadcrumb-item
+    = button_to @blog, :method => :delete, :data => { :confirm => "Are you sure you want to delete that post?" }, :class => 'button button--to-delete' do
+      %i.fa.fa-trash.breadcrumb-item

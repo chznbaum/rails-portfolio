@@ -10,7 +10,6 @@ require 'action_mailer/railtie'
 require 'action_view/railtie'
 require 'action_cable/engine'
 require 'active_storage/engine'
-require 'sprockets/railtie'
 require 'dotenv-rails'
 
 # Require the gems listed in Gemfile, including any gems
@@ -34,7 +33,6 @@ module RailsPortfolio
       g.stylesheets     false
       g.javascripts     false
     end
-    config.assets.paths << "#{Rails.root}/app/assets/"
     config.eager_load_paths << "#{Rails.root}/lib"
     config.secret_key_base = Rails.application.credentials.dig(Rails.env.to_sym, :secret_key_base)
     config.sass.preferred_syntax = :sass

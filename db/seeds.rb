@@ -250,8 +250,8 @@ puts "#{Skill.count} skills created."
     subtitle: Faker::Lorem.words(5).join(" ").titlecase,
     body: Faker::Lorem.sentences(20).join(" ")
   )
-  @portfolio.main_image.attach(io: File.open("#{Rails.root}/app/assets/images/600x400.png"), filename: '600x400.png', content_type: 'image/png')
-  @portfolio.thumb_image.attach(io: File.open("#{Rails.root}/app/assets/images/350x200.png"), filename: '350x200.png', content_type: 'image/png')
+  @portfolio.main_image.attach(io: File.open("#{Rails.root}/app/webpacker/images/600x400.png"), filename: '600x400.png', content_type: 'image/png')
+  @portfolio.thumb_image.attach(io: File.open("#{Rails.root}/app/webpacker/images/350x200.png"), filename: '350x200.png', content_type: 'image/png')
 end
 
 puts "#{Portfolio.count} portfolio items created."

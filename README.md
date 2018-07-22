@@ -5,8 +5,10 @@ This is the source code for [https://chazonabaum.com](https://chazonabaum.com?q=
 ## Prerequisites
 
 * Ruby 2.5
+* Node 10.3
 * Rails 5.2
 * Postgresql
+* Yarn
 
 ## Installation
 
