@@ -17,6 +17,7 @@ import '../src/js/StickyNav'
 import 'cocoon-js'
 import '../src/js/PortfolioAlert'
 import '../src/js/cable'
+import '../src/js/analytics'
 
 Rails.start()
 Turbolinks.start()
