@@ -69,6 +69,9 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
 # Pagination
 gem 'kaminari', '~> 0.17.0'
 
+# Nested Forms
+gem 'cocoon', '~> 1.2', '>= 1.2.11'
+
 # Uploading
 gem 'aws-sdk-s3', '~> 1.17'
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
