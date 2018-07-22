@@ -10,14 +10,14 @@
 import Rails from 'rails-ujs'
 import Turbolinks from 'turbolinks'
 import 'jquery-ui'
-import '../src/js/html.sortable'
-import '../src/js/noframework.waypoints'
-import '../src/js/MobileMenu'
-import '../src/js/StickyNav'
+import '../src/javascript/html.sortable'
+import '../src/javascript/noframework.waypoints'
+import '../src/javascript/MobileMenu'
+import '../src/javascript/StickyNav'
 import 'cocoon-js'
-import '../src/js/PortfolioAlert'
-import '../src/js/cable'
-import '../src/js/analytics'
+import '../src/javascript/PortfolioAlert'
+import '../src/javascript/cable'
+import '../src/javascript/analytics'
 
 Rails.start()
 Turbolinks.start()
