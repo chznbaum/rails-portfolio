@@ -16,13 +16,10 @@ gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 # gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -72,21 +69,9 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
 # Pagination
 gem 'kaminari', '~> 0.17.0'
 
-# jQuery UI
-gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
-
 # Uploading
 gem 'aws-sdk-s3', '~> 1.17'
-gem 'carrierwave', '~> 1.1'
-gem 'carrierwave-aws', '~> 1.1'
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
-gem 'mini_magick', '~> 4.7', '>= 4.7.2'
-
-# Form JavaScript
-gem 'cocoon', '~> 1.2', '>= 1.2.10'
-
-# Notifications
-gem 'gritter', '~> 1.2'
 
 # Twitter
 gem 'twitter', '~> 6.1'
@@ -100,6 +85,9 @@ gem 'coderay', '~> 1.1', '>= 1.1.1'
 
 # HAML Syntax
 gem 'haml', '~> 5.0', '>= 5.0.4'
+
+# Webpack
+gem 'webpacker', '~> 3.5', '>= 3.5.5'
 
 # Load App Faster, new in Rails 5.2.0
 gem 'bootsnap', '~> 1.3', '>= 1.3.1'

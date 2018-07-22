@@ -77,24 +77,24 @@ module ApplicationHelper
   def alerts
     if flash[:alert]
       alert = flash[:alert]
-      alert_image = :warning
+      alert_type = :warning
       alert_title = "Alert"
     elsif flash[:error]
       alert = flash[:error]
-      alert_image = :error
+      alert_type = :error
       alert_title = "Error"
     elsif flash[:notice]
       alert = flash[:notice]
-      alert_image = :notice
+      alert_type = :notice
       alert_title = "Notice"
     end
         
     if alert
-      alert_generator alert, alert_image, alert_title
+      alert_generator alert, alert_type, alert_title
     end
   end
 
-  def alert_generator msg, image, title
-    js add_gritter(msg, image: image, title: title, sticky: false)
+  def alert_generator msg, type, title
+    "<div class=\"alert alert--#{type.to_s}\"><button type=\"button\" class=\"alert__close\">&times;</button><div class=\"alert__text\"><h4>#{title}</h4><p>#{msg}</p></div></div>".html_safe
   end
 end

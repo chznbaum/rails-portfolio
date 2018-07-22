@@ -21,8 +21,8 @@
   %div
     = f.fields_for :technologies do |technology_form|
       = render "technology_fields", :f => technology_form
-    %div
-      = link_to_add_association "Add Technology", f, :technologies
+    -# %div
+    -#   = link_to_add_association "Add Technology", f, :technologies
   %div
     = f.submit
     

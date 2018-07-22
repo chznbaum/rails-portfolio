@@ -1,22 +1,21 @@
 if( document.readyState === 'complete' ) {
-  stickyNav();
-  console.log('already ready');
+  stickyNav()
+  console.log('already ready')
 } else {
   document.addEventListener('DOMContentLoaded', function() {
-    stickyNav();
-  });
+    stickyNav()
+  })
 }
 function stickyNav() {
-  const sectionTitles = document.querySelectorAll('.section-title');
+  const sectionTitles = document.querySelectorAll('.section-title')
   const navbar = document.querySelector('.navbar');
-  console.log(sectionTitles[0]);
   const stickyNav = new Waypoint({
     element: sectionTitles[0],
     handler: function(direction) {
       if (direction == 'down') {
-        navbar.classList.add('navbar--solid');
+        navbar.classList.add('navbar--solid')
       } else {
-        navbar.classList.remove('navbar--solid');
+        navbar.classList.remove('navbar--solid')
       }
     }
   })

@@ -60,11 +60,12 @@
       ga('create', 'UA-87914773-1', 'auto');
       ga('send', 'pageview');
 
-    = javascript_include_tag 'application'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
 
   %body
     = render "shared/application_nav"
+    - if flash['alert'] || flash['notify'] || flash['error']
+      %div.alert__alert-box
+        = alerts
     = yield
     = render "shared/application_footer"
-
-    = alerts
