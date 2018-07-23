@@ -1,5 +1,8 @@
 # Portfolio Source Code
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/ff4d918504d9398f9953/maintainability)](https://codeclimate.com/github/chznbaum/rails-portfolio/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/ff4d918504d9398f9953/test_coverage)](https://codeclimate.com/github/chznbaum/rails-portfolio/test_coverage)
+
 This is the source code for [https://chazonabaum.com](https://chazonabaum.com?q=GitHub).
 
 ## Prerequisites
