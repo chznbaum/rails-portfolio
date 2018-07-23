@@ -10,7 +10,7 @@
 import Rails from 'rails-ujs'
 import Turbolinks from 'turbolinks'
 import 'jquery-ui'
-import '../src/javascript/html.sortable'
+import 'html5sortable'
 import '../src/javascript/noframework.waypoints'
 import '../src/javascript/MobileMenu'
 import '../src/javascript/StickyNav'

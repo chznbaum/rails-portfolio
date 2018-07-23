@@ -5,6 +5,7 @@
     "cocoon-js": "^0.0.5",
     "font-awesome": "^4.7.0",
     "gritter": "^1.7.4",
+    "html5sortable": "^0.9.3",
     "jquery": "^3.3.1",
     "jquery-ui": "^1.12.1",
     "rails-ujs": "^5.2.0",
