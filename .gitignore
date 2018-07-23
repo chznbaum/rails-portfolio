@@ -28,3 +28,4 @@ sendgrid.env
 /node_modules
 yarn-debug.log*
 .yarn-integrity
+coverage
