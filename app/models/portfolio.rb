@@ -4,8 +4,8 @@ class Portfolio < ApplicationRecord
 
   validates_presence_of :title, :body
   
-  mount_uploader :main_image, PortfolioUploader
-  mount_uploader :thumb_image, PortfolioUploader
+  has_one_attached :main_image
+  has_one_attached :thumb_image
 
   def self.by_position
     order("position ASC")

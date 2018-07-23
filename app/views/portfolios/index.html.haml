@@ -6,6 +6,6 @@
   .container
     %h1.section-title= "Portfolio"
     = source_helper "alert alert-info"
-    .row
+    .row.row--gutters
       = render :partial => "portfolio_item", :collection => @portfolio_items
   

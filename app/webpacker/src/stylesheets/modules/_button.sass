@@ -1,0 +1,34 @@
+.button
+  text-decoration: none
+  padding: .75rem 1.2rem
+  display: inline-block
+  font-weight: 400
+  border: none
+  cursor: pointer
+  background-color: #EEEEEE
+  transition: background-color .3s ease
+  
+  &:hover
+    background-color: #CCCCCC
+
+  &--accent-color
+    background-color: $darkAccent
+    color: #ffffff
+
+    &:hover
+      background-color: darken($darkAccent, 10%)
+
+  &--outline
+    background-color: transparent
+    border: solid 3px $textLightPrimary
+    color: $textLightPrimary
+
+    &:hover
+      background-color: $textLightPrimary
+      color: $darkColor
+
+  &--to-delete
+    padding: 0
+    background: transparent
+    border-color: transparent
+    color: $colorPrimary
