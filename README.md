@@ -64,6 +64,22 @@ development:
     username:
     password:
     api_key:
+test:
+  aws:
+    access_key_id:
+    region:
+    secret_access_key:
+    bucket_name:
+  twitter:
+    access_secret:
+    access_token:
+    consumer_key:
+    consumer_secret:
+  secret_key_base:
+  sendgrid:
+    username:
+    password:
+    api_key:
 staging:
   aws:
     access_key_id:
