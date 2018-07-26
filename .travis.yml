@@ -1,0 +1,30 @@
+cache:
+  bundler: true
+  directories:
+    - node_modules
+env:
+  global:
+    - CC_TEST_REPORTER_ID=0499181793af102b8b9f604aa772026e9cad3e31f0250901a05819a37055a02a
+    - RACK_ENV=test
+language: ruby
+rvm:
+  - 2.5.0
+services:
+  - postgresql
+before_install:
+  - gem update --system
+install:
+  - bundle install --without production
+  - yarn install
+before_script:
+  - echo "$RAILS_MASTER_KEY" > config/master.key
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+script:
+  - bundle install
+  - bundle exec rake db:setup
+  - bundle exec rake db:test:prepare
+  - bundle exec rake
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT

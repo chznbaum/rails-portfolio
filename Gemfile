@@ -38,6 +38,8 @@ group :development, :test do
   gem 'faker'
 end
 
+gem 'simplecov', '~> 0.16.1', group: :test
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
