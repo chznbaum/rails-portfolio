@@ -23,6 +23,8 @@ before_script:
   - ./cc-test-reporter before-build
 script:
   - bundle install
+  - bundle exec rake db:setup
+  - bundle exec rake db:test:prepare
   - bundle exec rake
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
